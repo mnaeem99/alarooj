@@ -1,0 +1,111 @@
+<svg viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Define gradients -->
+  <defs>
+    <linearGradient id="primaryGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0B7A75;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00A896;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1E3A8A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2563EB;stop-opacity:1" />
+    </linearGradient>
+    <radialGradient id="glowGradient">
+      <stop offset="0%" style="stop-color:#00A896;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#00A896;stop-opacity:0" />
+    </radialGradient>
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+      <feOffset dx="0" dy="3" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.25"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Subtle background glow -->
+  <circle cx="300" cy="240" r="200" fill="url(#glowGradient)"/>
+  
+  <!-- Main icon - centered and larger -->
+  <g transform="translate(300, 200)" filter="url(#shadow)">
+    <!-- Circular badge background -->
+    <circle cx="0" cy="0" r="110" fill="url(#primaryGradient)" opacity="0.15"/>
+    
+    <!-- Modern truck design - larger scale -->
+    <g transform="scale(1.6)">
+      <!-- Truck container/body -->
+      <rect x="-45" y="-20" width="65" height="30" rx="3" fill="url(#primaryGradient)"/>
+      
+      <!-- Truck cabin -->
+      <path d="M 20,-20 L 42,-20 L 42,2 L 32,10 L 20,10 Z" fill="url(#accentGradient)"/>
+      
+      <!-- Windshield highlight -->
+      <path d="M 24,-16 L 38,-16 L 38,-2 L 24,-2 Z" fill="#ffffff" opacity="0.35"/>
+      
+      <!-- Door line detail -->
+      <line x1="30" y1="-20" x2="30" y2="10" stroke="#1E3A8A" stroke-width="0.5" opacity="0.3"/>
+      
+      <!-- Recycling symbol - integrated and prominent -->
+      <g transform="translate(-10, -5) scale(0.85)">
+        <path d="M 0,-12 L 4,-18 L 8,-12 L 5,-12 L 5,0 L -1,0 L -1,-12 Z" fill="#FFB800"/>
+        <path d="M 0,-12 L 4,-18 L 8,-12 L 5,-12 L 5,0 L -1,0 L -1,-12 Z" fill="#FFB800" transform="rotate(120 2 -6)"/>
+        <path d="M 0,-12 L 4,-18 L 8,-12 L 5,-12 L 5,0 L -1,0 L -1,-12 Z" fill="#FFB800" transform="rotate(240 2 -6)"/>
+        <!-- Center circle for recycling symbol -->
+        <circle cx="2" cy="-6" r="3" fill="#FFB800" opacity="0.3"/>
+      </g>
+      
+      <!-- Arabic geometric pattern accent -->
+      <g transform="translate(-42, -28)">
+        <path d="M 0,0 L 4,-4 L 8,0 L 4,4 Z" fill="#FFB800"/>
+        <path d="M 2,-2 L 4,-4 L 6,-2 L 4,0 Z" fill="#ffffff" opacity="0.4"/>
+      </g>
+      
+      <!-- Wheels with depth -->
+      <g>
+        <circle cx="-25" cy="10" r="9" fill="#1E3A8A"/>
+        <circle cx="-25" cy="10" r="5" fill="#60A5FA"/>
+        <circle cx="-25" cy="10" r="2" fill="#1E3A8A" opacity="0.4"/>
+        
+        <circle cx="28" cy="10" r="9" fill="#1E3A8A"/>
+        <circle cx="28" cy="10" r="5" fill="#60A5FA"/>
+        <circle cx="28" cy="10" r="2" fill="#1E3A8A" opacity="0.4"/>
+      </g>
+      
+      <!-- Movement lines for dynamic feel -->
+      <line x1="-50" y1="-25" x2="-45" y2="-25" stroke="#00A896" stroke-width="1.5" opacity="0.6" stroke-linecap="round"/>
+      <line x1="-48" y1="-18" x2="-43" y2="-18" stroke="#00A896" stroke-width="1.5" opacity="0.4" stroke-linecap="round"/>
+    </g>
+  </g>
+  
+  <!-- Company name - centered below icon -->
+  <g transform="translate(300, 380)">
+    <!-- AHLAM with Arabic-inspired dot accent -->
+    <text x="0" y="0" font-family="'Helvetica Neue', 'Arial Black', sans-serif" font-size="72" font-weight="900" fill="#1E3A8A" text-anchor="middle" letter-spacing="-1">
+      AHLAM
+    </text>
+    
+    <!-- Arabic flair dot above A -->
+    <circle cx="-85" cy="-55" r="5" fill="#FFB800"/>
+    <circle cx="-85" cy="-55" r="2.5" fill="#FFD700"/>
+    
+    <!-- Subtitle with letter spacing -->
+    <text x="0" y="42" font-family="'Helvetica Neue', Arial, sans-serif" font-size="26" font-weight="600" fill="url(#primaryGradient)" text-anchor="middle" letter-spacing="6">
+      JUNK REMOVAL
+    </text>
+    
+    <!-- Decorative underline -->
+    <line x1="-110" y1="52" x2="110" y2="52" stroke="url(#primaryGradient)" stroke-width="2" opacity="0.3" stroke-linecap="round"/>
+    
+    <!-- Eco badge -->
+    <g transform="translate(0, 75)">
+      <rect x="-85" y="-12" width="170" height="24" rx="12" fill="#00A896" opacity="0.1"/>
+      <circle cx="-60" cy="0" r="4" fill="#00A896"/>
+      <text x="-50" y="5" font-family="'Helvetica Neue', Arial, sans-serif" font-size="13" font-weight="600" fill="#0B7A75" text-anchor="start" letter-spacing="1.5">
+        ECO-FRIENDLY SERVICE
+      </text>
+    </g>
+  </g>
+</svg>

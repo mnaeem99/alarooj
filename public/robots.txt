@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://alaroojtechnical.ae/sitemap.xml
+
+
+
+
+
+
+
+
