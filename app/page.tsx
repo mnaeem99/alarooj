@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import Services from "@/components/Services";
+import TopProducts from "@/components/TopProducts";
 import WhyChooseUs from "@/components/WhyChooseUs";
 import HowItWorks from "@/components/HowItWorks";
 import BeforeAfter from "@/components/BeforeAfter";
@@ -29,6 +30,7 @@ export default function Home() {
       <Header />
       <Hero />
       <Services />
+      <TopProducts />
       <WhyChooseUs />
       <HowItWorks />
       <BeforeAfter />

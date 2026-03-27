@@ -1,0 +1,611 @@
+[
+    {
+        "id":  230,
+        "name":  "Car Seat",
+        "slug":  "car-seat",
+        "shortDescription":  "Workshop-grade car seat solutions for replacement, restoration, and garage setup projects.",
+        "detailedDescription":  "Car seat product options support interior refurbishment and repair workflows where fit, finish, and durability are important for customer satisfaction.",
+        "keywords":  [
+                         "car seat",
+                         "automotive seat",
+                         "garage equipment uae"
+                     ],
+        "serviceDetails":  [
+                               "Car Seat supply consultation for workshop layout and technical suitability",
+                               "Car Seat installation planning support for service bay operations",
+                               "Car Seat preventive maintenance guidance to reduce equipment downtime",
+                               "Car Seat troubleshooting support for reliability and performance continuity"
+                           ],
+        "models":  [
+                       "MQ-107",
+                       "MQ-105",
+                       "MQ-104",
+                       "MQ-103"
+                   ]
+    },
+    {
+        "id":  242,
+        "name":  "Combination Paint Booth",
+        "slug":  "combination-paint-booth",
+        "shortDescription":  "Combination spray booth systems for painting and baking workflows in body shop environments.",
+        "detailedDescription":  "Combination paint booth systems enable prep, spray, and curing tasks within a controlled environment, helping body shops improve quality consistency.",
+        "keywords":  [
+                         "combination paint booth",
+                         "spray booth",
+                         "body shop booth"
+                     ],
+        "serviceDetails":  [
+                               "Combination Paint Booth supply consultation for workshop layout and technical suitability",
+                               "Combination Paint Booth installation planning support for service bay operations",
+                               "Combination Paint Booth preventive maintenance guidance to reduce equipment downtime",
+                               "Combination Paint Booth troubleshooting support for reliability and performance continuity"
+                           ],
+        "models":  [
+                       "Superbake Combination Paint Booth"
+                   ]
+    },
+    {
+        "id":  241,
+        "name":  "Screw Compressor",
+        "slug":  "screw-compressor",
+        "shortDescription":  "Industrial screw compressor units designed for reliable compressed air delivery in busy workshops.",
+        "detailedDescription":  "Screw compressor categories are designed for stable compressed air supply to pneumatic tools, paint lines, and workshop utility systems.",
+        "keywords":  [
+                         "screw compressor",
+                         "compressed air",
+                         "garage air system"
+                     ],
+        "serviceDetails":  [
+                               "Screw Compressor supply consultation for workshop layout and technical suitability",
+                               "Screw Compressor installation planning support for service bay operations",
+                               "Screw Compressor preventive maintenance guidance to reduce equipment downtime",
+                               "Screw Compressor troubleshooting support for reliability and performance continuity"
+                           ],
+        "models":  [
+                       "Screw Compressor - 1",
+                       "Screw Compressor - 3",
+                       "Screw Compressor - 5"
+                   ]
+    },
+    {
+        "id":  240,
+        "name":  "Two Post Lift",
+        "slug":  "two-post-lift",
+        "shortDescription":  "Two post vehicle lifts for fast servicing, underbody inspection, and mechanical maintenance.",
+        "detailedDescription":  "Two post lift systems are widely used for underbody service, fast bay turnover, and safe technician access in automotive workshops.",
+        "keywords":  [
+                         "two post lift",
+                         "vehicle lift",
+                         "garage lift uae"
+                     ],
+        "serviceDetails":  [
+                               "Two Post Lift supply consultation for workshop layout and technical suitability",
+                               "Two Post Lift installation planning support for service bay operations",
+                               "Two Post Lift preventive maintenance guidance to reduce equipment downtime",
+                               "Two Post Lift troubleshooting support for reliability and performance continuity"
+                           ],
+        "models":  [
+
+                   ]
+    },
+    {
+        "id":  239,
+        "name":  "AC Recycling Machine",
+        "slug":  "ac-recycling-machine",
+        "shortDescription":  "Automotive AC recycling and refrigerant management machines for service centers.",
+        "detailedDescription":  "AC recycling machine solutions support refrigerant recovery, recharge, and maintenance operations for modern automotive air-conditioning services.",
+        "keywords":  [
+                         "ac recycling machine",
+                         "refrigerant recovery",
+                         "car ac service"
+                     ],
+        "serviceDetails":  [
+                               "AC Recycling Machine supply consultation for workshop layout and technical suitability",
+                               "AC Recycling Machine installation planning support for service bay operations",
+                               "AC Recycling Machine preventive maintenance guidance to reduce equipment downtime",
+                               "AC Recycling Machine troubleshooting support for reliability and performance continuity"
+                           ],
+        "models":  [
+
+                   ]
+    },
+    {
+        "id":  238,
+        "name":  "Tools",
+        "slug":  "tools",
+        "shortDescription":  "Professional tools and workshop accessories for daily repair, diagnostics, and installation jobs.",
+        "detailedDescription":  "General tools categories include workshop-ready hand tools and utility items used in mechanical, body repair, and diagnostic tasks.",
+        "keywords":  [
+                         "garage tools",
+                         "automotive tools",
+                         "workshop accessories"
+                     ],
+        "serviceDetails":  [
+                               "Tools supply consultation for workshop layout and technical suitability",
+                               "Tools installation planning support for service bay operations",
+                               "Tools preventive maintenance guidance to reduce equipment downtime",
+                               "Tools troubleshooting support for reliability and performance continuity"
+                           ],
+        "models":  [
+
+                   ]
+    },
+    {
+        "id":  236,
+        "name":  "Infrared Light",
+        "slug":  "infrared-light",
+        "shortDescription":  "Infrared drying and curing light systems used in paint and body repair operations.",
+        "detailedDescription":  "Infrared light systems are used in body shop drying processes to shorten paint curing times and improve throughput in repair bays.",
+        "keywords":  [
+                         "infrared light",
+                         "paint curing",
+                         "body shop infrared"
+                     ],
+        "serviceDetails":  [
+                               "Infrared Light supply consultation for workshop layout and technical suitability",
+                               "Infrared Light installation planning support for service bay operations",
+                               "Infrared Light preventive maintenance guidance to reduce equipment downtime",
+                               "Infrared Light troubleshooting support for reliability and performance continuity"
+                           ],
+        "models":  [
+                       "PT-3000W",
+                       "PT-2000W"
+                   ]
+    },
+    {
+        "id":  235,
+        "name":  "Bumper Stand \u0026 Panel Stands",
+        "slug":  "bumper-stand-and-panel-stands",
+        "shortDescription":  "Durable bumper and panel stands to improve paint prep and body panel handling.",
+        "detailedDescription":  "Bumper and panel stand products improve handling, prep, and painting workflow for detached panels and bumper components.",
+        "keywords":  [
+                         "bumper stand",
+                         "panel stand",
+                         "body shop stand"
+                     ],
+        "serviceDetails":  [
+                               "Bumper Stand \u0026 Panel Stands supply consultation for workshop layout and technical suitability",
+                               "Bumper Stand \u0026 Panel Stands installation planning support for service bay operations",
+                               "Bumper Stand \u0026 Panel Stands preventive maintenance guidance to reduce equipment downtime",
+                               "Bumper Stand \u0026 Panel Stands troubleshooting support for reliability and performance continuity"
+                           ],
+        "models":  [
+                       "QCR-B04-1",
+                       "QCR-B04-2",
+                       "QCR-PO-3-1",
+                       "QCR-PO3-2",
+                       "QCR-PO5"
+                   ]
+    },
+    {
+        "id":  234,
+        "name":  "Air Compressor",
+        "slug":  "air-compressor",
+        "shortDescription":  "Air compressor range for pneumatic tools, spray systems, and workshop utility lines.",
+        "detailedDescription":  "Air compressor product lines power spray operations and pneumatic workshop tools with reliable pressure output for daily use.",
+        "keywords":  [
+                         "air compressor",
+                         "pneumatic system",
+                         "garage compressor"
+                     ],
+        "serviceDetails":  [
+                               "Air Compressor supply consultation for workshop layout and technical suitability",
+                               "Air Compressor installation planning support for service bay operations",
+                               "Air Compressor preventive maintenance guidance to reduce equipment downtime",
+                               "Air Compressor troubleshooting support for reliability and performance continuity"
+                           ],
+        "models":  [
+                       "PT-A3",
+                       "PT-A2",
+                       "PT-A1"
+                   ]
+    },
+    {
+        "id":  233,
+        "name":  "Break Lathe Disk",
+        "slug":  "break-lathe-disk",
+        "shortDescription":  "Brake lathe and disc servicing equipment for accurate rotor correction and balancing work.",
+        "detailedDescription":  "Brake lathe disk equipment supports resurfacing and correction tasks during brake servicing to maintain safe stopping performance.",
+        "keywords":  [
+                         "brake lathe disk",
+                         "disc lathe",
+                         "brake service equipment"
+                     ],
+        "serviceDetails":  [
+                               "Break Lathe Disk supply consultation for workshop layout and technical suitability",
+                               "Break Lathe Disk installation planning support for service bay operations",
+                               "Break Lathe Disk preventive maintenance guidance to reduce equipment downtime",
+                               "Break Lathe Disk troubleshooting support for reliability and performance continuity"
+                           ],
+        "models":  [
+                       "PTB-983",
+                       "PT-8701",
+                       "PT-8700"
+                   ]
+    },
+    {
+        "id":  232,
+        "name":  "Dust Mask",
+        "slug":  "dust-mask",
+        "shortDescription":  "Protective dust mask products for paint shops and mechanical workshop safety compliance.",
+        "detailedDescription":  "Dust mask items support workshop health and safety controls in sanding, paint prep, and particulate-heavy processes.",
+        "keywords":  [
+                         "dust mask",
+                         "workshop safety",
+                         "paint shop ppe"
+                     ],
+        "serviceDetails":  [
+                               "Dust Mask supply consultation for workshop layout and technical suitability",
+                               "Dust Mask installation planning support for service bay operations",
+                               "Dust Mask preventive maintenance guidance to reduce equipment downtime",
+                               "Dust Mask troubleshooting support for reliability and performance continuity"
+                           ],
+        "models":  [
+                       "Noish - N95",
+                       "N-95"
+                   ]
+    },
+    {
+        "id":  231,
+        "name":  "Trolley Jack",
+        "slug":  "trolley-jack",
+        "shortDescription":  "Hydraulic trolley jacks for efficient lifting and wheel or undercarriage operations.",
+        "detailedDescription":  "Trolley jack and lifting support products are used for tire, brake, and undercar maintenance where fast positioning is required.",
+        "keywords":  [
+                         "trolley jack",
+                         "hydraulic jack",
+                         "vehicle lifting"
+                     ],
+        "serviceDetails":  [
+                               "Trolley Jack supply consultation for workshop layout and technical suitability",
+                               "Trolley Jack installation planning support for service bay operations",
+                               "Trolley Jack preventive maintenance guidance to reduce equipment downtime",
+                               "Trolley Jack troubleshooting support for reliability and performance continuity"
+                           ],
+        "models":  [
+                       "Engine Crane (3 Ton)",
+                       "Engine Crane (2.5Ton)",
+                       "Engine Crane (2 Ton)",
+                       "Engine Crane (1.5Ton)",
+                       "Engine Crane (1 Ton)",
+                       "Engine Crane (500kg)",
+                       "Transmission Jack",
+                       "PT-T2",
+                       "Engine Crane - FC5C",
+                       "Body Repair Kit - GC",
+                       "Bench Press - KSC-15"
+                   ]
+    },
+    {
+        "id":  217,
+        "name":  "Paint Booth",
+        "slug":  "paint-booth",
+        "shortDescription":  "Automobile paint booth systems with controlled airflow for high quality finishing.",
+        "detailedDescription":  "Paint booth categories include multiple workshop configurations to support controlled spray conditions and consistent paint finishing quality.",
+        "keywords":  [
+                         "paint booth",
+                         "automobile paint booth",
+                         "spray paint booth uae"
+                     ],
+        "serviceDetails":  [
+                               "Paint Booth supply consultation for workshop layout and technical suitability",
+                               "Paint Booth installation planning support for service bay operations",
+                               "Paint Booth preventive maintenance guidance to reduce equipment downtime",
+                               "Paint Booth troubleshooting support for reliability and performance continuity"
+                           ],
+        "models":  [
+                       "SB-8900",
+                       "HC-910",
+                       "HC-900",
+                       "Infrared Paint Booth",
+                       "SB-8600",
+                       "SB-8400",
+                       "SB-8300",
+                       "Model SB 8200",
+                       "Model SB V1",
+                       "Model SB DXN"
+                   ]
+    },
+    {
+        "id":  218,
+        "name":  "Paint Booth Filter",
+        "slug":  "paint-booth-filter",
+        "shortDescription":  "Paint booth filter media for cleaner airflow and improved finishing performance.",
+        "detailedDescription":  "Paint booth filter products are used to maintain airflow quality, reduce contamination, and protect paint application performance.",
+        "keywords":  [
+                         "paint booth filter",
+                         "roof filter",
+                         "floor filter",
+                         "pre filter"
+                     ],
+        "serviceDetails":  [
+                               "Paint Booth Filter supply consultation for workshop layout and technical suitability",
+                               "Paint Booth Filter installation planning support for service bay operations",
+                               "Paint Booth Filter preventive maintenance guidance to reduce equipment downtime",
+                               "Paint Booth Filter troubleshooting support for reliability and performance continuity"
+                           ],
+        "models":  [
+                       "Bag Filter",
+                       "Pre Filter",
+                       "Floor Filter",
+                       "Roof Filter"
+                   ]
+    },
+    {
+        "id":  219,
+        "name":  "Bus Booth",
+        "slug":  "bus-booth",
+        "shortDescription":  "Large-format booth systems developed for bus and heavy vehicle painting projects.",
+        "detailedDescription":  "Bus booth products are built for larger vehicle dimensions, supporting commercial and fleet refinishing operations.",
+        "keywords":  [
+                         "bus booth",
+                         "heavy vehicle booth",
+                         "commercial vehicle paint booth"
+                     ],
+        "serviceDetails":  [
+                               "Bus Booth supply consultation for workshop layout and technical suitability",
+                               "Bus Booth installation planning support for service bay operations",
+                               "Bus Booth preventive maintenance guidance to reduce equipment downtime",
+                               "Bus Booth troubleshooting support for reliability and performance continuity"
+                           ],
+        "models":  [
+                       "SB-15-50D",
+                       "SB-15-50C",
+                       "SB-15-50B"
+                   ]
+    },
+    {
+        "id":  220,
+        "name":  "Pre Station Booth",
+        "slug":  "pre-station-booth",
+        "shortDescription":  "Pre-station booth units for sanding, preparation, and workflow staging before final paint.",
+        "detailedDescription":  "Pre station booth setups provide dedicated sanding and preparation zones before vehicles move into final spray environments.",
+        "keywords":  [
+                         "pre station booth",
+                         "prep station",
+                         "paint preparation booth"
+                     ],
+        "serviceDetails":  [
+                               "Pre Station Booth supply consultation for workshop layout and technical suitability",
+                               "Pre Station Booth installation planning support for service bay operations",
+                               "Pre Station Booth preventive maintenance guidance to reduce equipment downtime",
+                               "Pre Station Booth troubleshooting support for reliability and performance continuity"
+                           ],
+        "models":  [
+                       "PS 6400",
+                       "PS 6600"
+                   ]
+    },
+    {
+        "id":  221,
+        "name":  "Exhaust System",
+        "slug":  "exhaust-system",
+        "shortDescription":  "Workshop exhaust extraction systems that improve ventilation and operator safety.",
+        "detailedDescription":  "Exhaust system categories help remove fumes and emissions from enclosed service bays to improve ventilation and operator safety.",
+        "keywords":  [
+                         "exhaust system",
+                         "fume extraction",
+                         "hose reel exhaust"
+                     ],
+        "serviceDetails":  [
+                               "Exhaust System supply consultation for workshop layout and technical suitability",
+                               "Exhaust System installation planning support for service bay operations",
+                               "Exhaust System preventive maintenance guidance to reduce equipment downtime",
+                               "Exhaust System troubleshooting support for reliability and performance continuity"
+                           ],
+        "models":  [
+                       "Hose Real Exhaust Sy"
+                   ]
+    },
+    {
+        "id":  222,
+        "name":  "Auto car wash system",
+        "slug":  "auto-car-wash-system",
+        "shortDescription":  "Automatic car wash system setups for service stations and fleet wash operations.",
+        "detailedDescription":  "Auto car wash system products support efficient external vehicle cleaning workflows for service centers and fleet operations.",
+        "keywords":  [
+                         "auto car wash system",
+                         "automatic wash",
+                         "car wash equipment"
+                     ],
+        "serviceDetails":  [
+                               "Auto car wash system supply consultation for workshop layout and technical suitability",
+                               "Auto car wash system installation planning support for service bay operations",
+                               "Auto car wash system preventive maintenance guidance to reduce equipment downtime",
+                               "Auto car wash system troubleshooting support for reliability and performance continuity"
+                           ],
+        "models":  [
+                       "Auto Car Wash"
+                   ]
+    },
+    {
+        "id":  224,
+        "name":  "Tools Trolley",
+        "slug":  "tools-trolley",
+        "shortDescription":  "Heavy-duty tools trolley cabinets for organized workshop operations and mobility.",
+        "detailedDescription":  "Tools trolley categories focus on storage mobility, technician efficiency, and organized access to high-use workshop tools.",
+        "keywords":  [
+                         "tools trolley",
+                         "tool cabinet",
+                         "workshop storage"
+                     ],
+        "serviceDetails":  [
+                               "Tools Trolley supply consultation for workshop layout and technical suitability",
+                               "Tools Trolley installation planning support for service bay operations",
+                               "Tools Trolley preventive maintenance guidance to reduce equipment downtime",
+                               "Tools Trolley troubleshooting support for reliability and performance continuity"
+                           ],
+        "models":  [
+                       "Tool Trolley - 365pc",
+                       "Tool Trolley - 228PC",
+                       "Tools Trolley - 240p",
+                       "Tool Trolley - 198PC",
+                       "Tool Trolley - 72 Ti",
+                       "Tool Trolley - 168pc",
+                       "Besita Tools Trolley",
+                       "PT-501",
+                       "PT-304",
+                       "PT-303",
+                       "PT-302"
+                   ]
+    },
+    {
+        "id":  225,
+        "name":  "Power Tech Welding Equipments",
+        "slug":  "power-tech-welding-equipments",
+        "shortDescription":  "Power Tech welding and repair equipment for collision, fabrication, and restoration tasks.",
+        "detailedDescription":  "Power Tech welding equipment ranges cover body repair and fabrication processes where controlled heat and precision are essential.",
+        "keywords":  [
+                         "power tech welding equipments",
+                         "welding machine",
+                         "spot welder"
+                     ],
+        "serviceDetails":  [
+                               "Power Tech Welding Equipments supply consultation for workshop layout and technical suitability",
+                               "Power Tech Welding Equipments installation planning support for service bay operations",
+                               "Power Tech Welding Equipments preventive maintenance guidance to reduce equipment downtime",
+                               "Power Tech Welding Equipments troubleshooting support for reliability and performance continuity"
+                           ],
+        "models":  [
+                       "Maxima Measuring Sys",
+                       "PT-10088",
+                       "PT-C50",
+                       "PT-10000X",
+                       "PT-8500",
+                       "PT-8288-2B",
+                       "PT-7205",
+                       "PT-6250",
+                       "PT-4231",
+                       "PT-2800",
+                       "PT-2602",
+                       "PT-2005",
+                       "PT-2009",
+                       "PT-1600A",
+                       "PT-1500",
+                       "PT-962",
+                       "PT-900",
+                       "PT-800X",
+                       "PT-500",
+                       "PT-472",
+                       "PT-423II",
+                       "PT-423I",
+                       "PT-40",
+                       "PT-18"
+                   ]
+    },
+    {
+        "id":  226,
+        "name":  "Automatic battery Charger",
+        "slug":  "automatic-battery-charger",
+        "shortDescription":  "Automatic battery charger systems for workshop charging, diagnostics, and maintenance.",
+        "detailedDescription":  "Automatic battery charger products support charging, recovery, and battery maintenance tasks in active workshop environments.",
+        "keywords":  [
+                         "automatic battery charger",
+                         "battery charging equipment",
+                         "garage charger"
+                     ],
+        "serviceDetails":  [
+                               "Automatic battery Charger supply consultation for workshop layout and technical suitability",
+                               "Automatic battery Charger installation planning support for service bay operations",
+                               "Automatic battery Charger preventive maintenance guidance to reduce equipment downtime",
+                               "Automatic battery Charger troubleshooting support for reliability and performance continuity"
+                           ],
+        "models":  [
+                       "PT-2600A",
+                       "PT-2000A",
+                       "PT-1200A",
+                       "PT-800",
+                       "PT-30AN",
+                       "PT-30A"
+                   ]
+    },
+    {
+        "id":  227,
+        "name":  "Heshbon lift",
+        "slug":  "heshbon-lift",
+        "shortDescription":  "Heshbon lift equipment for alignment, servicing, and stable lifting performance.",
+        "detailedDescription":  "Heshbon lift categories provide vehicle lifting solutions for general service, inspection, and alignment-related workshop tasks.",
+        "keywords":  [
+                         "heshbon lift",
+                         "car lift system",
+                         "garage lifting equipment"
+                     ],
+        "serviceDetails":  [
+                               "Heshbon lift supply consultation for workshop layout and technical suitability",
+                               "Heshbon lift installation planning support for service bay operations",
+                               "Heshbon lift preventive maintenance guidance to reduce equipment downtime",
+                               "Heshbon lift troubleshooting support for reliability and performance continuity"
+                           ],
+        "models":  [
+                       "PTE-20",
+                       "PT-30B",
+                       "PT-30A",
+                       "Motor Cycle Lift",
+                       "HL-3300J",
+                       "HL-52F",
+                       "HL-51F",
+                       "HL-46HL",
+                       "HL-42F",
+                       "HL-32F",
+                       "HL-31X",
+                       "HL-26K",
+                       "HL-25K",
+                       "HL-25H"
+                   ]
+    },
+    {
+        "id":  228,
+        "name":  "Inground lift",
+        "slug":  "inground-lift",
+        "shortDescription":  "Inground lift systems for clean bay layouts and high-capacity workshop lifting.",
+        "detailedDescription":  "Inground lift systems support clean bay layouts and heavy-duty service operations with stable below-floor lifting structures.",
+        "keywords":  [
+                         "inground lift",
+                         "flush floor lift",
+                         "service bay lift"
+                     ],
+        "serviceDetails":  [
+                               "Inground lift supply consultation for workshop layout and technical suitability",
+                               "Inground lift installation planning support for service bay operations",
+                               "Inground lift preventive maintenance guidance to reduce equipment downtime",
+                               "Inground lift troubleshooting support for reliability and performance continuity"
+                           ],
+        "models":  [
+                       "PT-3500F",
+                       "PT-3500D",
+                       "PT-3500A"
+                   ]
+    },
+    {
+        "id":  229,
+        "name":  "Pulling Bench",
+        "slug":  "pulling-bench",
+        "shortDescription":  "Chassis pulling bench and frame repair equipment for collision repair centers.",
+        "detailedDescription":  "Pulling bench categories are used in collision and chassis correction processes where accurate frame positioning is required.",
+        "keywords":  [
+                         "pulling bench",
+                         "frame machine",
+                         "collision repair bench"
+                     ],
+        "serviceDetails":  [
+                               "Pulling Bench supply consultation for workshop layout and technical suitability",
+                               "Pulling Bench installation planning support for service bay operations",
+                               "Pulling Bench preventive maintenance guidance to reduce equipment downtime",
+                               "Pulling Bench troubleshooting support for reliability and performance continuity"
+                           ],
+        "models":  [
+                       "H8",
+                       "H2",
+                       "H10",
+                       "H9",
+                       "K2000",
+                       "H100",
+                       "PT-900",
+                       "PT-300-2",
+                       "PT-300",
+                       "PT-160",
+                       "PT-100-2",
+                       "PT-100"
+                   ]
+    }
+]

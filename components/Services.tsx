@@ -47,6 +47,24 @@ const services = [
     description: "Urgent technical support to reduce downtime and restore operations in busy auto workshops.",
     color: "from-green-600 to-emerald-600",
   },
+  {
+    icon: PaintBucket,
+    title: "Industrial Painting Booth Solutions",
+    description: "Support for industrial painting booth, automobile painting booth, powder coating booth, and dust collection booth setups.",
+    color: "from-indigo-500 to-blue-600",
+  },
+  {
+    icon: Wind,
+    title: "Exhaust & Ventilation System Works",
+    description: "Design support, fitting, and maintenance for garage exhaust systems, hose reel extraction, and airflow balancing.",
+    color: "from-cyan-600 to-blue-600",
+  },
+  {
+    icon: Wrench,
+    title: "Pre Station & Bus Booth Service",
+    description: "Installation and preventive maintenance for pre station booth and bus booth systems used in high-volume facilities.",
+    color: "from-amber-500 to-orange-600",
+  },
 ];
 
 export default function Services() {
@@ -85,6 +103,11 @@ export default function Services() {
           <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-4">Our Services</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             End-to-end technical support for garage equipment in Sharjah and Ajman
+          </p>
+          <p className="text-base text-gray-600 max-w-4xl mx-auto mt-4">
+            Inspired by leading UAE workshop portfolios, our team supports paint booths,
+            pre station booths, industrial ovens, exhaust systems, compressor lines, and
+            essential body shop equipment with strong technical execution standards.
           </p>
         </motion.div>
 

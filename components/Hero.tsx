@@ -60,6 +60,11 @@ export default function Hero() {
             variants={itemVariants}
             className="mb-6"
           >
+          </motion.div>
+          <motion.div
+            variants={itemVariants}
+            className="mb-6"
+          >
             <span className="inline-block px-4 py-2 bg-secondary-emerald/20 text-secondary-emerald rounded-full text-sm font-semibold mb-4">
               UAE Auto Workshop Technical Services
             </span>
@@ -138,6 +143,11 @@ export default function Hero() {
             ))}
           </motion.div>
         </motion.div>
+        <motion.div
+            variants={itemVariants}
+            className="mb-6"
+          >
+          </motion.div>
       </div>
 
       {/* Scroll Indicator */}
