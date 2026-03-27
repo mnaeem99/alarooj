@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
@@ -27,16 +27,6 @@ export const metadata: Metadata = {
   classification: "Business",
   applicationName: "AL AROOJ TECHNICAL TRADING F.Z.E",
   referrer: "origin-when-cross-origin",
-  colorScheme: "light",
-  themeColor: [
-    { media: "(prefers-color-scheme: light)", color: "#0a2540" },
-    { media: "(prefers-color-scheme: dark)", color: "#0a2540" },
-  ],
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    maximumScale: 5,
-  },
   icons: {
     icon: [
       { url: "/images/ahlam_logo.png", type: "image/png" },
@@ -111,6 +101,17 @@ export const metadata: Metadata = {
     "contact": "+971500000000",
     "email": "info@alaroojtechnical.ae",
   },
+};
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+  colorScheme: "light",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#0a2540" },
+    { media: "(prefers-color-scheme: dark)", color: "#0a2540" },
+  ],
 };
 
 export default function RootLayout({
