@@ -28,7 +28,7 @@ Email: ${formData.email}
 Service: ${formData.serviceType}
 Message: ${formData.message}`;
     
-    const whatsappUrl = `https://wa.me/971500000000?text=${encodeURIComponent(message)}`;
+    const whatsappUrl = `https://wa.me/971553250775?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
 
@@ -173,7 +173,7 @@ Message: ${formData.message}`;
               
               <div className="space-y-4">
                 <a
-                  href="tel:+971500000000"
+                  href="tel:+971564861236"
                   className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
                 >
                   <div className="w-12 h-12 bg-secondary-emerald rounded-lg flex items-center justify-center">
@@ -181,12 +181,12 @@ Message: ${formData.message}`;
                   </div>
                   <div>
                     <p className="text-sm text-white/70">Phone</p>
-                    <p className="text-lg font-bold">+971500000000</p>
+                    <p className="text-lg font-bold">+971564861236</p>
                   </div>
                 </a>
 
                 <a
-                  href="mailto:info@alaroojtechnical.ae"
+                  href="mailto:Alaroojtradings@gmail.com"
                   className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
                 >
                   <div className="w-12 h-12 bg-secondary-emerald rounded-lg flex items-center justify-center">
@@ -194,12 +194,12 @@ Message: ${formData.message}`;
                   </div>
                   <div>
                     <p className="text-sm text-white/70">Email</p>
-                    <p className="text-lg font-bold">info@alaroojtechnical.ae</p>
+                    <p className="text-lg font-bold">Alaroojtradings@gmail.com</p>
                   </div>
                 </a>
 
                 <a
-                  href="https://wa.me/971500000000"
+                  href="https://wa.me/971553250775"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
@@ -209,7 +209,7 @@ Message: ${formData.message}`;
                   </div>
                   <div>
                     <p className="text-sm text-white/70">WhatsApp</p>
-                    <p className="text-lg font-bold">+971500000000</p>
+                    <p className="text-lg font-bold">+971553250775</p>
                   </div>
                 </a>
 
@@ -220,7 +220,7 @@ Message: ${formData.message}`;
                   <div>
                     <p className="text-sm text-white/70 mb-2">Location</p>
                     <div className="flex flex-wrap gap-2">
-                      <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Ajman Free Zone</span>
+                      <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Ajman, Sharjah, UAE</span>
                       {locations.map((location, index) => (
                         <span
                           key={index}
@@ -236,7 +236,7 @@ Message: ${formData.message}`;
             </div>
 
             <motion.a
-              href="https://wa.me/971500000000"
+              href="https://wa.me/971553250775"
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full px-8 py-4 bg-green-500 hover:bg-green-600 text-white rounded-xl font-bold text-lg flex items-center justify-center space-x-2 transition-colors"

@@ -95,11 +95,11 @@ export const metadata: Metadata = {
   },
   other: {
     "geo.region": "AE-SH",
-    "geo.placename": "Ajman Free Zone",
+    "geo.placename": "Ajman, Sharjah, UAE",
     "geo.position": "25.4052;55.5136",
     "ICBM": "25.4052, 55.5136",
-    "contact": "+971500000000",
-    "email": "info@alaroojtechnical.ae",
+    "contact": "+971564861236",
+    "email": "Alaroojtradings@gmail.com",
   },
 };
 
@@ -126,8 +126,8 @@ export default function RootLayout({
     "image": "https://alaroojtechnical.ae/images/ahlam_logo.png",
     "@id": "https://alaroojtechnical.ae",
     "url": "https://alaroojtechnical.ae",
-    "telephone": "+971500000000",
-    "email": "info@alaroojtechnical.ae",
+    "telephone": "+971564861236",
+    "email": "Alaroojtradings@gmail.com",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Ajman",
@@ -220,13 +220,13 @@ export default function RootLayout({
     "logo": "https://alaroojtechnical.ae/images/ahlam_logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+971500000000",
+      "telephone": "+971564861236",
       "contactType": "Customer Service",
       "areaServed": "AE",
       "availableLanguage": ["English", "Arabic"]
     },
     "sameAs": [
-      "https://wa.me/971500000000"
+      "https://wa.me/971553250775"
     ]
   };
 

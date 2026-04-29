@@ -83,7 +83,7 @@ Edit the phone numbers and email addresses in:
 
 ### Update WhatsApp Number
 
-Replace `971501234567` with your actual WhatsApp number in:
+Current WhatsApp number: `971553250775`
 - `components/ContactSection.tsx`
 - `components/FloatingButtons.tsx`
 
@@ -125,7 +125,7 @@ This project is created for AL AROOJ TECHNICAL TRADING F.Z.E. All rights reserve
 
 ## Support
 
-For questions or support, contact: info@alaroojtechnical.ae
+For questions or support, contact: Alaroojtradings@gmail.com
 
 
 

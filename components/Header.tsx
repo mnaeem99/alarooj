@@ -88,7 +88,7 @@ export default function Header() {
               )
             ))}
             <motion.a
-              href="tel:+971500000000"
+              href="tel:+971564861236"
               className="flex items-center space-x-2 px-4 py-2 bg-secondary-emerald text-white rounded-lg hover:bg-secondary-teal transition-colors"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -144,7 +144,7 @@ export default function Header() {
                 )
               ))}
               <a
-                href="tel:+971500000000"
+                href="tel:+971564861236"
                 className="flex items-center justify-center space-x-2 px-4 py-3 bg-secondary-emerald text-white rounded-lg"
                 onClick={() => setIsMobileMenuOpen(false)}
               >

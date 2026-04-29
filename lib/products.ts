@@ -1,4 +1,5 @@
 import productsData from "@/data/products.json";
+import productImagesData from "@/data/product-images.json";
 
 export type ProductCategory = {
   id: number;
@@ -12,6 +13,7 @@ export type ProductCategory = {
 };
 
 export const products = productsData as ProductCategory[];
+export const productImages = productImagesData as Record<string, string[]>;
 
 export function getProductBySlug(slug: string): ProductCategory | undefined {
   return products.find((product) => product.slug === slug);
@@ -19,4 +21,8 @@ export function getProductBySlug(slug: string): ProductCategory | undefined {
 
 export function getTopProducts(limit = 8): ProductCategory[] {
   return products.slice(0, limit);
+}
+
+export function getProductImages(slug: string): string[] {
+  return productImages[slug] ?? [];
 }

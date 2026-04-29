@@ -45,7 +45,7 @@ export default function AreasPage() {
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <motion.a
-                href="tel:+971500000000"
+                href="tel:+971564861236"
                 className="flex items-center space-x-2 px-8 py-4 bg-secondary-emerald hover:bg-secondary-teal text-white rounded-xl font-bold text-lg shadow-2xl transition-colors"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -54,7 +54,7 @@ export default function AreasPage() {
                 <span>Call Now</span>
               </motion.a>
               <motion.a
-                href="https://wa.me/971500000000"
+                href="https://wa.me/971553250775"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center space-x-2 px-8 py-4 bg-green-500 hover:bg-green-600 text-white rounded-xl font-bold text-lg shadow-2xl transition-colors"
@@ -128,7 +128,7 @@ export default function AreasPage() {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <motion.a
-                  href="tel:+971500000000"
+                  href="tel:+971564861236"
                   className="flex items-center space-x-2 px-8 py-4 bg-secondary-emerald hover:bg-secondary-teal text-white rounded-xl font-bold text-lg shadow-2xl transition-colors"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -137,7 +137,7 @@ export default function AreasPage() {
                   <span>Call Now</span>
                 </motion.a>
                 <motion.a
-                  href="https://wa.me/971500000000"
+                  href="https://wa.me/971553250775"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center space-x-2 px-8 py-4 bg-green-500 hover:bg-green-600 text-white rounded-xl font-bold text-lg shadow-2xl transition-colors"
@@ -148,12 +148,12 @@ export default function AreasPage() {
                   <span>WhatsApp Us</span>
                 </motion.a>
                 <motion.a
-                  href="mailto:info@alaroojtechnical.ae"
+                  href="mailto:Alaroojtradings@gmail.com"
                   className="flex items-center space-x-2 px-8 py-4 bg-white/20 hover:bg-white/30 text-white rounded-xl font-bold text-lg shadow-2xl transition-colors"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <span>Email: info@alaroojtechnical.ae</span>
+                  <span>Email: Alaroojtradings@gmail.com</span>
                 </motion.a>
               </div>
             </div>

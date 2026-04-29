@@ -105,7 +105,7 @@ export default function Hero() {
             </motion.a>
 
             <motion.a
-              href="tel:+971500000000"
+              href="tel:+971564861236"
               className="group px-8 py-4 bg-white text-primary-navy rounded-xl font-bold text-lg shadow-2xl flex items-center space-x-2"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -114,7 +114,7 @@ export default function Hero() {
               <span>Call Now</span>
             </motion.a>
             <motion.a
-              href="https://wa.me/971500000000"
+              href="https://wa.me/971553250775"
               target="_blank"
               rel="noopener noreferrer"
               className="group px-8 py-4 bg-green-500 text-white rounded-xl font-bold text-lg shadow-2xl flex items-center space-x-2"

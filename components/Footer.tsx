@@ -23,10 +23,10 @@ const services = [
 ];
 
 const socialLinks = [
-  { icon: Facebook, href: "#", label: "Facebook" },
-  { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Twitter, href: "#", label: "Twitter" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
+  // { icon: Facebook, href: "#", label: "Facebook" },
+  // { icon: Instagram, href: "#", label: "Instagram" },
+  // { icon: Twitter, href: "#", label: "Twitter" },
+  // { icon: Linkedin, href: "#", label: "LinkedIn" },
 ];
 
 export default function Footer() {
@@ -106,26 +106,27 @@ export default function Footer() {
               <li className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-secondary-emerald" />
                 <a
-                  href="tel:+971500000000"
+                  href="tel:+971564861236"
                   className="text-gray-400 hover:text-secondary-emerald transition-colors"
                 >
-                  +971500000000
+                  +971564861236
                 </a>
               </li>
               <li className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-secondary-emerald" />
                 <a
-                  href="mailto:info@alaroojtechnical.ae"
+                  href="mailto:Alaroojtradings@gmail.com"
                   className="text-gray-400 hover:text-secondary-emerald transition-colors"
                 >
-                  info@alaroojtechnical.ae
+                  Alaroojtradings@gmail.com
                 </a>
               </li>
               <li className="flex items-start space-x-3">
                 <MapPin className="w-5 h-5 text-secondary-emerald mt-1" />
                 <span className="text-gray-400">
-                  Ajman Free Zone<br />
-                  Serving Sharjah & Ajman
+                  Ajman, Sharjah
+                  <br />
+                  United Arab Emirates
                 </span>
               </li>
             </ul>
