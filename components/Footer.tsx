@@ -23,10 +23,10 @@ const services = [
 ];
 
 const socialLinks = [
-  // { icon: Facebook, href: "#", label: "Facebook" },
-  // { icon: Instagram, href: "#", label: "Instagram" },
-  // { icon: Twitter, href: "#", label: "Twitter" },
-  // { icon: Linkedin, href: "#", label: "LinkedIn" },
+  { icon: Facebook, href: "#", label: "Facebook" },
+  { icon: Instagram, href: "#", label: "Instagram" },
+  { icon: Twitter, href: "#", label: "Twitter" },
+  { icon: Linkedin, href: "#", label: "LinkedIn" },
 ];
 
 export default function Footer() {
