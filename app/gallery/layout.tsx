@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "AL AROOJ TECHNICAL TRADING F.Z.E Projects Gallery",
     description: "Explore workshop equipment installation and maintenance work in UAE.",
-    url: "https://alaroojtechnical.ae/gallery",
+    url: "https://aalaroojtechnical.com/gallery",
     type: "website",
   },
   alternates: {

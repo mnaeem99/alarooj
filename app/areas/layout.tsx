@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Service Areas | AL AROOJ TECHNICAL TRADING F.Z.E",
     description: "Serving auto workshops in Sharjah and Ajman with technical equipment services.",
-    url: "https://alaroojtechnical.ae/areas",
+    url: "https://aalaroojtechnical.com/areas",
     type: "website",
   },
   alternates: {

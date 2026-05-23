@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: '*',
       allow: '/',
     },
-    sitemap: 'https://alaroojtechnical.ae/sitemap.xml',
+    sitemap: 'https://aalaroojtechnical.com/sitemap.xml',
   }
 }
 
