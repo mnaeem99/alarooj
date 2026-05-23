@@ -1,23 +1,17 @@
 import type { Metadata } from "next";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "About Us - UAE Garage Equipment Experts",
-  description: "Learn about AL AROOJ TECHNICAL TRADING F.Z.E, a UAE-licensed company specializing in garage equipment installation, maintenance, and repair services.",
+  description:
+    "Learn about AL AROOJ TECHNICAL TRADING F.Z.E, a UAE-licensed company specializing in garage equipment installation, maintenance, and repair services.",
+  path: "/why-us",
   keywords: [
     "about al arooj technical trading",
     "garage equipment experts uae",
     "licensed technical trading company ajman",
   ],
-  openGraph: {
-    title: "About AL AROOJ TECHNICAL TRADING F.Z.E",
-    description: "Trusted technical partner for auto workshops in Sharjah and Ajman.",
-    url: "https://alaroojtechnical.com/why-us",
-    type: "website",
-  },
-  alternates: {
-    canonical: "/why-us",
-  },
-};
+});
 
 export default function WhyUsLayout({
   children,
@@ -26,5 +20,3 @@ export default function WhyUsLayout({
 }) {
   return <>{children}</>;
 }
-
-

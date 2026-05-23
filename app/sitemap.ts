@@ -1,8 +1,9 @@
 import { MetadataRoute } from 'next'
 import { products } from '@/lib/products'
+import { SITE_URL } from '@/lib/seo'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://alaroojtechnical.com'
+  const baseUrl = SITE_URL
   const currentDate = new Date()
   const productUrls: MetadataRoute.Sitemap = products.map((product) => ({
     url: `${baseUrl}/products/${product.slug}`,

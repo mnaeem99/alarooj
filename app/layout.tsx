@@ -1,15 +1,26 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import JsonLd from "@/components/JsonLd";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
+import {
+  SITE_URL,
+  SITE_NAME,
+  DEFAULT_OG_IMAGE,
+  DEFAULT_DESCRIPTION,
+} from "@/lib/seo";
 
 const inter = Inter({ subsets: ["latin"] });
 
+const googleVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION;
+const bingVerification = process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION;
+
 export const metadata: Metadata = {
   title: {
-    default: "AL AROOJ TECHNICAL TRADING F.Z.E | Auto Garage Equipment Services UAE",
-    template: "%s | AL AROOJ TECHNICAL TRADING F.Z.E",
+    default: `${SITE_NAME} | Auto Garage Equipment Services UAE`,
+    template: `%s | ${SITE_NAME}`,
   },
-  description: "Professional auto garage equipment installation, maintenance, and repair services in Sharjah and Ajman, UAE. Air compressors, car lifts, paint booths, welding machines, washer pumps, vacuum machines, and electrical control troubleshooting.",
+  description: DEFAULT_DESCRIPTION,
   keywords: [
     "auto garage equipment maintenance uae",
     "car lift installation sharjah",
@@ -20,20 +31,16 @@ export const metadata: Metadata = {
     "garage equipment maintenance sharjah",
     "auto workshop technical services ajman",
   ],
-  authors: [{ name: "AL AROOJ TECHNICAL TRADING F.Z.E", url: "https://alaroojtechnical.com" }],
-  creator: "AL AROOJ TECHNICAL TRADING F.Z.E",
-  publisher: "AL AROOJ TECHNICAL TRADING F.Z.E",
+  authors: [{ name: SITE_NAME, url: SITE_URL }],
+  creator: SITE_NAME,
+  publisher: SITE_NAME,
   category: "Auto Garage Equipment Services",
   classification: "Business",
-  applicationName: "AL AROOJ TECHNICAL TRADING F.Z.E",
+  applicationName: SITE_NAME,
   referrer: "origin-when-cross-origin",
   icons: {
-    icon: [
-      { url: "/images/arooj_logo.jpeg", type: "image/jpeg" },
-    ],
-    apple: [
-      { url: "/images/arooj_logo.jpeg", type: "image/jpeg" },
-    ],
+    icon: [{ url: "/images/arooj_logo.jpeg", type: "image/jpeg" }],
+    apple: [{ url: "/images/arooj_logo.jpeg", type: "image/jpeg" }],
     shortcut: "/images/arooj_logo.jpeg",
   },
   manifest: "/manifest.json",
@@ -42,57 +49,56 @@ export const metadata: Metadata = {
     address: true,
     telephone: true,
   },
-  metadataBase: new URL("https://alaroojtechnical.com"),
+  metadataBase: new URL(SITE_URL),
   alternates: {
     canonical: "/",
-    languages: {
-      "en-US": "https://alaroojtechnical.com",
-      "ar-AE": "https://alaroojtechnical.com/ar",
-    },
   },
   openGraph: {
-    title: "AL AROOJ TECHNICAL TRADING F.Z.E - Auto Garage Equipment Services UAE",
-    description: "Installation, maintenance, and repair for garage equipment in Sharjah and Ajman. Air compressors, car lifts, paint booths, and control systems.",
-    url: "https://alaroojtechnical.com",
-    siteName: "AL AROOJ TECHNICAL TRADING F.Z.E",
-    locale: "en_US",
+    title: `${SITE_NAME} - Auto Garage Equipment Services UAE`,
+    description:
+      "Installation, maintenance, and repair for garage equipment in Sharjah and Ajman. Air compressors, car lifts, paint booths, and control systems.",
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    locale: "en_AE",
     type: "website",
     images: [
       {
-        url: "/images/arooj_logo.jpeg",
+        url: DEFAULT_OG_IMAGE,
         width: 1200,
         height: 630,
-        alt: "AL AROOJ TECHNICAL TRADING F.Z.E - UAE garage equipment services",
+        alt: `${SITE_NAME} - UAE garage equipment services`,
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "AL AROOJ TECHNICAL TRADING F.Z.E - Garage Equipment Experts",
-    description: "Professional garage equipment installation and repair services in Sharjah and Ajman.",
-    images: ["/images/arooj_logo.jpeg"],
-    creator: "@alaroojtechnical",
+    title: `${SITE_NAME} - Garage Equipment Experts`,
+    description:
+      "Professional garage equipment installation and repair services in Sharjah and Ajman.",
+    images: [DEFAULT_OG_IMAGE],
   },
   robots: {
     index: true,
     follow: true,
-    nocache: false,
     googleBot: {
       index: true,
       follow: true,
-      noimageindex: false,
-      "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
+      "max-video-preview": -1,
     },
+  },
+  verification: {
+    ...(googleVerification ? { google: googleVerification } : {}),
+    ...(bingVerification
+      ? { other: { "msvalidate.01": bingVerification } }
+      : {}),
   },
   other: {
     "geo.region": "AE-SH",
     "geo.placename": "Ajman, Sharjah, UAE",
     "geo.position": "25.4052;55.5136",
-    "ICBM": "25.4052, 55.5136",
-    "contact": "+971564861236",
-    "email": "Alaroojtradings@gmail.com",
+    ICBM: "25.4052, 55.5136",
   },
 };
 
@@ -112,134 +118,141 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const structuredData = {
+  const localBusiness = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
-    "name": "AL AROOJ TECHNICAL TRADING F.Z.E",
-    "image": "https://alaroojtechnical.com/images/arooj_logo.jpeg",
-    "@id": "https://alaroojtechnical.com",
-    "url": "https://alaroojtechnical.com",
-    "telephone": "+971564861236",
-    "email": "Alaroojtradings@gmail.com",
-    "address": {
+    "@id": `${SITE_URL}/#business`,
+    name: SITE_NAME,
+    image: `${SITE_URL}/images/arooj_logo.jpeg`,
+    url: SITE_URL,
+    telephone: "+971564861236",
+    email: "Alaroojtradings@gmail.com",
+    address: {
       "@type": "PostalAddress",
-      "addressLocality": "Ajman",
-      "addressRegion": "Ajman",
-      "addressCountry": "AE"
+      addressLocality: "Ajman",
+      addressRegion: "Ajman",
+      addressCountry: "AE",
     },
-    "geo": {
+    geo: {
       "@type": "GeoCoordinates",
-      "latitude": 25.4052,
-      "longitude": 55.5136
+      latitude: 25.4052,
+      longitude: 55.5136,
     },
-    "openingHoursSpecification": {
+    openingHoursSpecification: {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
+      dayOfWeek: [
         "Monday",
         "Tuesday",
         "Wednesday",
         "Thursday",
         "Friday",
         "Saturday",
-        "Sunday"
+        "Sunday",
       ],
-      "opens": "08:00",
-      "closes": "20:00"
+      opens: "08:00",
+      closes: "20:00",
     },
-    "priceRange": "$$",
-    "serviceArea": { "@type": "AdministrativeArea", "name": "Sharjah & Ajman" },
-    "areaServed": {
-      "@type": "Country",
-      "name": "United Arab Emirates"
-    },
-    "hasOfferCatalog": {
+    priceRange: "$$",
+    areaServed: [
+      { "@type": "City", name: "Sharjah" },
+      { "@type": "City", name: "Ajman" },
+      { "@type": "Country", name: "United Arab Emirates" },
+    ],
+    hasOfferCatalog: {
       "@type": "OfferCatalog",
-      "name": "Garage Equipment Services",
-      "itemListElement": [
+      name: "Garage Equipment Services",
+      itemListElement: [
         {
           "@type": "Offer",
-          "itemOffered": {
+          itemOffered: {
             "@type": "Service",
-            "name": "Air Compressor Services",
-            "description": "Air compressor installation and repair services"
-          }
+            name: "Air Compressor Services",
+            description: "Air compressor installation and repair services",
+          },
         },
         {
           "@type": "Offer",
-          "itemOffered": {
+          itemOffered: {
             "@type": "Service",
-            "name": "Car Lift Installation & Repair",
-            "description": "Car lift setup, maintenance, and fault fixing"
-          }
+            name: "Car Lift Installation & Repair",
+            description: "Car lift setup, maintenance, and fault fixing",
+          },
         },
         {
           "@type": "Offer",
-          "itemOffered": {
+          itemOffered: {
             "@type": "Service",
-            "name": "Electrical & Control Systems",
-            "description": "Electrical troubleshooting for auto workshops"
-          }
+            name: "Electrical & Control Systems",
+            description: "Electrical troubleshooting for auto workshops",
+          },
         },
         {
           "@type": "Offer",
-          "itemOffered": {
+          itemOffered: {
             "@type": "Service",
-            "name": "Paint Booth Setup",
-            "description": "Paint booth installation and system checks"
-          }
+            name: "Paint Booth Setup",
+            description: "Paint booth installation and system checks",
+          },
         },
-        {
-          "@type": "Offer",
-          "itemOffered": {
-            "@type": "Service",
-            "name": "Garage Equipment Maintenance",
-            "description": "Maintenance and repairs for workshop equipment"
-          }
-        }
-      ]
+      ],
     },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "reviewCount": "50"
-    }
   };
 
-  const organizationStructuredData = {
+  const organization = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "AL AROOJ TECHNICAL TRADING F.Z.E",
-    "url": "https://alaroojtechnical.com",
-    "logo": "https://alaroojtechnical.com/images/arooj_logo.jpeg",
-    "contactPoint": {
+    "@id": `${SITE_URL}/#organization`,
+    name: SITE_NAME,
+    url: SITE_URL,
+    logo: `${SITE_URL}/images/arooj_logo.jpeg`,
+    contactPoint: {
       "@type": "ContactPoint",
-      "telephone": "+971564861236",
-      "contactType": "Customer Service",
-      "areaServed": "AE",
-      "availableLanguage": ["English", "Arabic"]
+      telephone: "+971564861236",
+      contactType: "customer service",
+      areaServed: "AE",
+      availableLanguage: ["English", "Arabic"],
     },
-    "sameAs": [
-      "https://wa.me/971553250775"
-    ]
+    sameAs: ["https://wa.me/971553250775"],
+  };
+
+  const website = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
+    url: SITE_URL,
+    name: SITE_NAME,
+    description: DEFAULT_DESCRIPTION,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    inLanguage: "en-AE",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: `${SITE_URL}/products?q={search_term_string}`,
+      },
+      "query-input": "required name=search_term_string",
+    },
   };
 
   return (
-    <html lang="en">
+    <html lang="en-AE">
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationStructuredData) }}
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet"
         />
+        <JsonLd data={[localBusiness, organization, website]} />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <GoogleAnalytics />
+        {children}
+      </body>
     </html>
   );
 }
-

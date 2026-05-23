@@ -6,21 +6,20 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
 import { products, getProductImages } from "@/lib/products";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
+export const metadata: Metadata = buildPageMetadata({
   title: "Products",
   description:
     "Explore our automotive workshop equipment range including paint booths, compressors, lifts, filters, tools, and body shop solutions.",
+  path: "/products",
   keywords: [
     "garage products uae",
     "automotive workshop equipment",
     "paint booth products",
     "car lift and compressor products",
   ],
-  alternates: {
-    canonical: "/products",
-  },
-};
+});
 
 export default function ProductsPage() {
   return (

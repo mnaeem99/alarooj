@@ -2,6 +2,7 @@
 // Usage: npm run indexnow
 // Run after each production deploy.
 
+// Keep in sync with lib/seo.ts INDEXNOW_KEY
 const HOST = 'alaroojtechnical.com'
 const KEY = 'd8377f7b26ac38a65dd4e73360676b62'
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`

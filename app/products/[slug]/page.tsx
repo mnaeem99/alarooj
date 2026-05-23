@@ -6,7 +6,9 @@ import { ArrowLeft, Phone, MessageCircle, CheckCircle2, ArrowUpRight, Wrench } f
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
+import JsonLd from "@/components/JsonLd";
 import { getProductBySlug, getProductImages, products } from "@/lib/products";
+import { buildPageMetadata, absoluteUrl, SITE_NAME } from "@/lib/seo";
 
 type ProductPageProps = {
   params: { slug: string };
@@ -28,14 +30,16 @@ export async function generateMetadata({
     };
   }
 
-  return {
-    title: `${product.name} Product`,
+  const images = getProductImages(slug);
+  const ogImage = images[0] ? `/${images[0]}` : undefined;
+
+  return buildPageMetadata({
+    title: product.name,
     description: product.shortDescription,
+    path: `/products/${product.slug}`,
     keywords: [...product.keywords, product.name, "auto workshop products uae"],
-    alternates: {
-      canonical: `/products/${product.slug}`,
-    },
-  };
+    ogImage,
+  });
 }
 
 export default function ProductDetailsPage({ params }: ProductPageProps) {
@@ -48,9 +52,64 @@ export default function ProductDetailsPage({ params }: ProductPageProps) {
   }
 
   const related = products.filter((p) => p.slug !== slug).slice(0, 3);
+  const pageUrl = absoluteUrl(`/products/${slug}`);
+  const primaryImage = productImages[0]
+    ? absoluteUrl(`/${productImages[0]}`)
+    : absoluteUrl("/images/arooj_logo.jpeg");
+
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: absoluteUrl("/"),
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Products",
+          item: absoluteUrl("/products"),
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: product.name,
+          item: pageUrl,
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: product.name,
+      description: product.detailedDescription,
+      image: primaryImage,
+      url: pageUrl,
+      brand: {
+        "@type": "Brand",
+        name: SITE_NAME,
+      },
+      category: "Automotive Workshop Equipment",
+      offers: {
+        "@type": "Offer",
+        url: pageUrl,
+        priceCurrency: "AED",
+        availability: "https://schema.org/InStock",
+        seller: {
+          "@type": "Organization",
+          name: SITE_NAME,
+        },
+      },
+    },
+  ];
 
   return (
     <main className="min-h-screen bg-white">
+      <JsonLd data={structuredData} />
       <Header />
 
       {/* Hero */}
