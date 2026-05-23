@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Garage Equipment Services UAE | AL AROOJ TECHNICAL TRADING F.Z.E",
     description: "Professional installation and repair services for auto garage equipment in Sharjah and Ajman.",
-    url: "https://aalaroojtechnical.com/services",
+    url: "https://alaroojtechnical.com/services",
     type: "website",
   },
   alternates: {
