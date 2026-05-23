@@ -29,13 +29,12 @@ export const metadata: Metadata = {
   referrer: "origin-when-cross-origin",
   icons: {
     icon: [
-      { url: "/images/ahlam_logo.png", type: "image/png" },
-      { url: "/images/ahlam_logo.png", type: "image/png" },
+      { url: "/images/arooj_logo.jpeg", type: "image/jpeg" },
     ],
     apple: [
-      { url: "/images/ahlam_logo.png", type: "image/png" },
+      { url: "/images/arooj_logo.jpeg", type: "image/jpeg" },
     ],
-    shortcut: "/images/ahlam_logo.png",
+    shortcut: "/images/arooj_logo.jpeg",
   },
   manifest: "/manifest.json",
   formatDetection: {
@@ -60,16 +59,10 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/ahlam_logo.png",
+        url: "/images/arooj_logo.jpeg",
         width: 1200,
         height: 630,
         alt: "AL AROOJ TECHNICAL TRADING F.Z.E - UAE garage equipment services",
-      },
-      {
-        url: "/images/ahlam_banner.png",
-        width: 1200,
-        height: 630,
-        alt: "AL AROOJ TECHNICAL TRADING F.Z.E",
       },
     ],
   },
@@ -77,7 +70,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "AL AROOJ TECHNICAL TRADING F.Z.E - Garage Equipment Experts",
     description: "Professional garage equipment installation and repair services in Sharjah and Ajman.",
-    images: ["/images/ahlam_logo.png"],
+    images: ["/images/arooj_logo.jpeg"],
     creator: "@alaroojtechnical",
   },
   robots: {
@@ -123,7 +116,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "name": "AL AROOJ TECHNICAL TRADING F.Z.E",
-    "image": "https://alaroojtechnical.com/images/ahlam_logo.png",
+    "image": "https://alaroojtechnical.com/images/arooj_logo.jpeg",
     "@id": "https://alaroojtechnical.com",
     "url": "https://alaroojtechnical.com",
     "telephone": "+971564861236",
@@ -217,7 +210,7 @@ export default function RootLayout({
     "@type": "Organization",
     "name": "AL AROOJ TECHNICAL TRADING F.Z.E",
     "url": "https://alaroojtechnical.com",
-    "logo": "https://alaroojtechnical.com/images/ahlam_logo.png",
+    "logo": "https://alaroojtechnical.com/images/arooj_logo.jpeg",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": "+971564861236",

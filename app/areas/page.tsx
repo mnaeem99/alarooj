@@ -1,160 +1,138 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Phone, MessageCircle } from "lucide-react";
+import { MapPin, Phone, MessageCircle, ArrowRight } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingButtons from "@/components/FloatingButtons";
 
 const serviceAreas = [
-  "Sharjah Industrial Areas",
-  "Industrial Area 1 - 18, Sharjah",
-  "Al Sajaa Industrial Area, Sharjah",
-  "Al Nahda, Sharjah",
-  "Muwaileh, Sharjah",
-  "Al Majaz, Sharjah",
-  "Al Khan, Sharjah",
-  "Ajman Free Zone",
-  "Al Jurf Industrial Area, Ajman",
-  "Al Nuaimiya, Ajman",
-  "Al Rashidiya, Ajman",
-  "Al Mowaihat, Ajman",
-  "Ajman Industrial 1 & 2",
-  "Nearby UAE workshop clusters on request",
+  { city: "Sharjah", places: [
+    "Industrial Area 1 – 18, Sharjah",
+    "Al Sajaa Industrial Area",
+    "Al Nahda, Sharjah",
+    "Muwaileh",
+    "Al Majaz",
+    "Al Khan",
+  ]},
+  { city: "Ajman", places: [
+    "Ajman Free Zone",
+    "Al Jurf Industrial Area",
+    "Al Nuaimiya",
+    "Al Rashidiya",
+    "Al Mowaihat",
+    "Ajman Industrial 1 & 2",
+  ]},
+  { city: "Nearby UAE", places: [
+    "Dubai industrial zones (on request)",
+    "Umm Al Quwain workshops (on request)",
+    "Ras Al Khaimah (on request)",
+  ]},
 ];
 
 export default function AreasPage() {
   return (
     <main className="min-h-screen bg-white">
       <Header />
-      
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-primary-navy to-secondary-teal text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+
+      {/* Hero */}
+      <section className="relative pt-32 pb-24 bg-primary-dark text-white overflow-hidden">
+        <div className="absolute inset-0 grid-bg opacity-30" />
+        <div className="absolute -top-32 -left-32 h-96 w-96 rounded-full bg-secondary-cyan/20 blur-3xl" />
+        <div className="absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-accent-orange/15 blur-3xl" />
+
+        <div className="container-tight relative">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-4xl mx-auto"
+            className="max-w-4xl mx-auto text-center"
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-              Service Coverage in Sharjah & Ajman
+            <span className="section-eyebrow">Service Coverage</span>
+            <h1 className="mt-5 text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-balance">
+              UAE workshop coverage —{" "}
+              <span className="gradient-text">Sharjah, Ajman & beyond.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-white/90 mb-8">
-              Fast-response technical support for auto workshop equipment
+            <p className="mt-5 text-xl text-white/80">
+              Fast-response technical support for auto workshop equipment across the UAE
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <motion.a
-                href="tel:+971564861236"
-                className="flex items-center space-x-2 px-8 py-4 bg-secondary-emerald hover:bg-secondary-teal text-white rounded-xl font-bold text-lg shadow-2xl transition-colors"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Phone className="w-5 h-5" />
-                <span>Call Now</span>
-              </motion.a>
-              <motion.a
+            <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+              <a href="tel:+971564861236" className="btn-primary">
+                <Phone className="w-5 h-5" /> Call Now
+              </a>
+              <a
                 href="https://wa.me/971553250775"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center space-x-2 px-8 py-4 bg-green-500 hover:bg-green-600 text-white rounded-xl font-bold text-lg shadow-2xl transition-colors"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                className="btn-whatsapp"
               >
-                <MessageCircle className="w-5 h-5" />
-                <span>WhatsApp</span>
-              </motion.a>
+                <MessageCircle className="w-5 h-5" /> WhatsApp
+              </a>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* Areas Grid */}
-      <section className="py-20 bg-neutral-light">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold text-primary-navy mb-4">
-              Service Areas
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              We support garages, service centers, and workshop facilities in:
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-6xl mx-auto">
-            {serviceAreas.map((area, index) => (
+      {/* Areas */}
+      <section className="relative py-24 bg-neutral-light overflow-hidden">
+        <div className="absolute inset-0 dot-bg opacity-50 pointer-events-none" />
+        <div className="container-tight relative">
+          <div className="grid lg:grid-cols-3 gap-6">
+            {serviceAreas.map((zone, i) => (
               <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
+                key={zone.city}
+                initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.02 }}
-                className="bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover-lift group"
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                className="bg-white rounded-3xl p-7 border border-gray-100 hover:border-secondary-cyan/40 hover:shadow-card-hover transition-all"
               >
-                <div className="flex items-start space-x-3">
-                  <div className="w-10 h-10 bg-gradient-to-br from-secondary-emerald to-secondary-teal rounded-lg flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
-                    <MapPin className="w-5 h-5 text-white" />
+                <div className="flex items-center gap-3 mb-5">
+                  <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-secondary-cyan to-secondary-teal flex items-center justify-center text-white shadow-md">
+                    <MapPin className="w-6 h-6" />
                   </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-primary-navy group-hover:text-secondary-emerald transition-colors">
-                      {area}
-                    </h3>
-                  </div>
+                  <h2 className="text-2xl font-bold text-primary-navy">{zone.city}</h2>
                 </div>
+                <ul className="space-y-2.5">
+                  {zone.places.map((p) => (
+                    <li key={p} className="flex items-start gap-2 text-gray-700">
+                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-secondary-cyan flex-shrink-0" />
+                      <span>{p}</span>
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </div>
 
-          {/* CTA Section */}
+          {/* CTA Banner */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mt-16 text-center"
+            className="mt-14 relative rounded-3xl overflow-hidden bg-gradient-to-br from-primary-dark via-primary-navy to-primary-slate p-8 md:p-12 text-white"
           >
-            <div className="bg-gradient-to-br from-primary-navy to-secondary-teal rounded-3xl p-8 md:p-12 text-white">
-              <h3 className="text-3xl md:text-4xl font-bold mb-4">
-                Need Garage Equipment Support in Your Area?
-              </h3>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-                Contact us for installation, maintenance, and emergency repair support.
-              </p>
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <motion.a
-                  href="tel:+971564861236"
-                  className="flex items-center space-x-2 px-8 py-4 bg-secondary-emerald hover:bg-secondary-teal text-white rounded-xl font-bold text-lg shadow-2xl transition-colors"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Phone className="w-5 h-5" />
-                  <span>Call Now</span>
-                </motion.a>
-                <motion.a
-                  href="https://wa.me/971553250775"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-2 px-8 py-4 bg-green-500 hover:bg-green-600 text-white rounded-xl font-bold text-lg shadow-2xl transition-colors"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <MessageCircle className="w-5 h-5" />
-                  <span>WhatsApp Us</span>
-                </motion.a>
-                <motion.a
-                  href="mailto:Alaroojtradings@gmail.com"
-                  className="flex items-center space-x-2 px-8 py-4 bg-white/20 hover:bg-white/30 text-white rounded-xl font-bold text-lg shadow-2xl transition-colors"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <span>Email: Alaroojtradings@gmail.com</span>
-                </motion.a>
+            <div className="absolute inset-0 grid-bg opacity-20" />
+            <div className="absolute -top-20 -right-20 h-80 w-80 rounded-full bg-accent-orange/20 blur-3xl" />
+
+            <div className="relative grid md:grid-cols-2 gap-8 items-center">
+              <div>
+                <h3 className="text-3xl md:text-4xl font-extrabold">
+                  Workshop in another UAE city?
+                </h3>
+                <p className="mt-3 text-white/85">
+                  We cover most industrial clusters across the UAE on request.
+                  Tell us your location and equipment type — we'll confirm same-day.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-3 md:justify-end">
+                <a href="tel:+971564861236" className="btn-primary">
+                  <Phone className="w-5 h-5" /> Call Now
+                </a>
+                <a href="/contact" className="btn-ghost">
+                  Get Quote <ArrowRight className="w-5 h-5" />
+                </a>
               </div>
             </div>
           </motion.div>
@@ -166,4 +144,3 @@ export default function AreasPage() {
     </main>
   );
 }
-

@@ -5,6 +5,14 @@
 @layer base {
   body {
     @apply bg-white text-gray-900 antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
+  h1, h2, h3, h4 {
+    @apply tracking-tight;
+  }
+  ::selection {
+    background: rgba(34, 224, 255, 0.35);
+    color: #0a1424;
   }
 }
 
@@ -12,48 +20,108 @@
   .text-balance {
     text-wrap: balance;
   }
-  
+
   .gradient-text {
-    @apply bg-gradient-to-r from-secondary-emerald to-secondary-teal bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-secondary-cyan via-secondary-electric to-secondary-emerald bg-clip-text text-transparent;
   }
-  
-  .glass-effect {
-    @apply backdrop-blur-md bg-white/80 dark:bg-gray-900/80;
+
+  .gradient-text-warm {
+    @apply bg-gradient-to-r from-accent-orange via-accent-amber to-accent-gold bg-clip-text text-transparent;
   }
-  
+
+  .glass-light {
+    @apply backdrop-blur-xl bg-white/70 border border-white/40;
+  }
+
+  .glass-dark {
+    @apply backdrop-blur-xl bg-primary-black/60 border border-white/10;
+  }
+
   .hover-lift {
     @apply transition-transform duration-300 hover:-translate-y-2;
   }
-  
-  .glow-effect {
-    box-shadow: 0 0 20px rgba(0, 212, 170, 0.3);
+
+  .neon-border {
+    box-shadow:
+      0 0 0 1px rgba(34, 224, 255, 0.25),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.04);
   }
-  
-  .glow-effect-hover:hover {
-    box-shadow: 0 0 30px rgba(0, 212, 170, 0.5);
+
+  .neon-border-hover:hover {
+    box-shadow:
+      0 0 0 1px rgba(34, 224, 255, 0.6),
+      0 12px 40px -10px rgba(34, 224, 255, 0.4);
+  }
+
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white bg-accent-orange hover:bg-accent-amber transition-all duration-300 shadow-lg shadow-accent-orange/30 hover:shadow-accent-amber/50 hover:-translate-y-0.5;
+  }
+
+  .btn-secondary {
+    @apply relative inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-primary-navy bg-white hover:bg-neutral-light transition-all duration-300 shadow-lg hover:-translate-y-0.5;
+  }
+
+  .btn-ghost {
+    @apply relative inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white border border-white/30 hover:border-secondary-cyan hover:text-secondary-cyan transition-all duration-300 backdrop-blur-md;
+  }
+
+  .btn-whatsapp {
+    @apply relative inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-full font-semibold text-white bg-green-500 hover:bg-green-600 transition-all duration-300 shadow-lg shadow-green-500/30 hover:-translate-y-0.5;
+  }
+
+  .section-eyebrow {
+    @apply inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-[0.18em] bg-secondary-cyan/10 text-secondary-cyan border border-secondary-cyan/20;
+  }
+
+  .container-tight {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(34, 224, 255, 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(34, 224, 255, 0.06) 1px, transparent 1px);
+    background-size: 56px 56px;
+  }
+
+  .dot-bg {
+    background-image: radial-gradient(rgba(10, 37, 64, 0.18) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .mask-fade-b {
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  }
+
+  .mask-fade-r {
+    mask-image: linear-gradient(to right, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, black 80%, transparent 100%);
+  }
+
+  .text-stroke {
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.18);
+    color: transparent;
   }
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #050b18;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #00D4AA;
-  border-radius: 5px;
+  background: linear-gradient(180deg, #00D9FF, #00D4AA);
+  border-radius: 999px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #00C9B7;
+  background: linear-gradient(180deg, #22e0ff, #00C9B7);
 }
-

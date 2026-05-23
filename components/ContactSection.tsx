@@ -2,11 +2,19 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
-import { Phone, Mail, MapPin, MessageCircle, Send } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle, Send, Clock4, ShieldCheck } from "lucide-react";
 
-const locations = [
-  "Sharjah",
-  "Ajman",
+const inputCls =
+  "w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200 text-slate-900 placeholder:text-slate-400 transition focus:outline-none focus:border-secondary-cyan focus:bg-white focus:ring-4 focus:ring-secondary-cyan/15 text-[15px]";
+
+const SERVICE_OPTIONS = [
+  "Air Compressor Services",
+  "Car Lift Installation & Repair",
+  "Electrical & Control Systems",
+  "Paint Booth Setup",
+  "Garage Equipment Maintenance",
+  "Emergency Repair Services",
+  "Other",
 ];
 
 export default function ContactSection() {
@@ -20,232 +28,180 @@ export default function ContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // WhatsApp integration
     const message = `New Quote Request:
 Name: ${formData.name}
 Phone: ${formData.phone}
 Email: ${formData.email}
 Service: ${formData.serviceType}
 Message: ${formData.message}`;
-    
     const whatsappUrl = `https://wa.me/971553250775?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value,
-    });
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-primary-navy to-secondary-teal text-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="relative py-24 bg-neutral-light overflow-hidden">
+      <div className="absolute inset-0 dot-bg opacity-50" />
+      <div className="absolute -top-32 -left-32 h-80 w-80 rounded-full bg-secondary-cyan/10 blur-3xl" />
+      <div className="absolute -bottom-32 -right-32 h-96 w-96 rounded-full bg-accent-orange/10 blur-3xl" />
+
+      <div className="container-tight relative">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center max-w-2xl mx-auto mb-14"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Get Your Free Quote Today
+          <span className="section-eyebrow">Get In Touch</span>
+          <h2 className="mt-5 text-4xl md:text-5xl font-extrabold text-primary-navy">
+            Request a Free Site Visit & Quote
           </h2>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Contact us for technical support in Sharjah & Ajman
+          <p className="mt-4 text-lg text-gray-600">
+            Tell us about your workshop equipment. We respond fast across Sharjah & Ajman.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-          {/* Contact Form */}
+        <div className="grid lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
+          {/* Form */}
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="bg-white/10 backdrop-blur-md rounded-2xl p-8"
+            className="lg:col-span-3 bg-white rounded-3xl p-6 md:p-8 shadow-xl shadow-primary-navy/5 border border-gray-100"
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div>
-                <label className="block text-sm font-semibold mb-2">
-                  Full Name *
-                </label>
-                <input
-                  type="text"
-                  name="name"
-                  required
-                  value={formData.name}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-secondary-emerald"
-                  placeholder="Your name"
-                />
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div>
-                  <label className="block text-sm font-semibold mb-2">
-                    Phone Number *
-                  </label>
+            <form onSubmit={handleSubmit} className="space-y-5">
+              <div className="grid md:grid-cols-2 gap-5">
+                <Field label="Full Name *">
+                  <input
+                    type="text"
+                    name="name"
+                    required
+                    value={formData.name}
+                    onChange={handleChange}
+                    className={inputCls}
+                    placeholder="Your name"
+                  />
+                </Field>
+                <Field label="Phone Number *">
                   <input
                     type="tel"
                     name="phone"
                     required
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-secondary-emerald"
+                    className={inputCls}
                     placeholder="+971 50 XXX XXXX"
                   />
-                </div>
-                <div>
-                  <label className="block text-sm font-semibold mb-2">
-                    Email
-                  </label>
+                </Field>
+              </div>
+
+              <div className="grid md:grid-cols-2 gap-5">
+                <Field label="Email">
                   <input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-secondary-emerald"
+                    className={inputCls}
                     placeholder="your@email.com"
                   />
-                </div>
+                </Field>
+                <Field label="Service Type *">
+                  <select
+                    name="serviceType"
+                    required
+                    value={formData.serviceType}
+                    onChange={handleChange}
+                    className={inputCls}
+                  >
+                    <option value="">Select a service</option>
+                    {SERVICE_OPTIONS.map((s) => (
+                      <option key={s} value={s}>{s}</option>
+                    ))}
+                  </select>
+                </Field>
               </div>
 
-              <div>
-                <label className="block text-sm font-semibold mb-2">
-                  Service Type *
-                </label>
-                <select
-                  name="serviceType"
-                  required
-                  value={formData.serviceType}
-                  onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:ring-2 focus:ring-secondary-emerald"
-                >
-                  <option value="" className="text-gray-900">Select a service</option>
-                  <option value="Compressor" className="text-gray-900">Air Compressor Services</option>
-                  <option value="Car Lift" className="text-gray-900">Car Lift Installation & Repair</option>
-                  <option value="Electrical" className="text-gray-900">Electrical & Control Systems</option>
-                  <option value="Paint Booth" className="text-gray-900">Paint Booth Setup</option>
-                  <option value="Maintenance" className="text-gray-900">Garage Equipment Maintenance</option>
-                  <option value="Emergency" className="text-gray-900">Emergency Repair Services</option>
-                  <option value="Other" className="text-gray-900">Other</option>
-                </select>
-              </div>
-
-              <div>
-                <label className="block text-sm font-semibold mb-2">
-                  Message
-                </label>
+              <Field label="Message">
                 <textarea
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
                   rows={4}
-                  className="w-full px-4 py-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-secondary-emerald resize-none"
-                  placeholder="Tell us about your workshop equipment requirement..."
+                  className={`${inputCls} resize-none`}
+                  placeholder="Tell us about your workshop equipment..."
                 />
-              </div>
+              </Field>
 
-              <motion.button
-                type="submit"
-                className="w-full px-8 py-4 bg-gradient-to-r from-secondary-emerald to-secondary-teal text-white rounded-xl font-bold text-lg flex items-center justify-center space-x-2"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
+              <button type="submit" className="btn-primary w-full">
                 <Send className="w-5 h-5" />
-                <span>Send Quote Request</span>
-              </motion.button>
+                Send Request via WhatsApp
+              </button>
+
+              <p className="text-xs text-gray-500 text-center pt-1">
+                Your request opens WhatsApp pre-filled — fastest way to reach our team.
+              </p>
             </form>
           </motion.div>
 
-          {/* Contact Info */}
+          {/* Contact info */}
           <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="space-y-6"
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="lg:col-span-2 space-y-4"
           >
-            <div className="bg-white/10 backdrop-blur-md rounded-2xl p-8">
-              <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-              
-              <div className="space-y-4">
-                <a
-                  href="tel:+971564861236"
-                  className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
-                >
-                  <div className="w-12 h-12 bg-secondary-emerald rounded-lg flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-white/70">Phone</p>
-                    <p className="text-lg font-bold">+971564861236</p>
-                  </div>
-                </a>
+            <ContactCard
+              href="tel:+971564861236"
+              icon={Phone}
+              label="Call us"
+              value="+971 56 486 1236"
+              accent="from-accent-orange to-accent-amber"
+            />
+            <ContactCard
+              href="https://wa.me/971553250775"
+              external
+              icon={MessageCircle}
+              label="WhatsApp"
+              value="+971 55 325 0775"
+              accent="from-green-500 to-emerald-600"
+            />
+            <ContactCard
+              href="mailto:Alaroojtradings@gmail.com"
+              icon={Mail}
+              label="Email"
+              value="Alaroojtradings@gmail.com"
+              accent="from-secondary-cyan to-secondary-teal"
+            />
+            <ContactCard
+              icon={MapPin}
+              label="Service Areas"
+              value="Ajman, Sharjah & UAE"
+              accent="from-primary-navy to-primary-slate"
+            />
 
-                <a
-                  href="mailto:Alaroojtradings@gmail.com"
-                  className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
-                >
-                  <div className="w-12 h-12 bg-secondary-emerald rounded-lg flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-white/70">Email</p>
-                    <p className="text-lg font-bold">Alaroojtradings@gmail.com</p>
-                  </div>
-                </a>
-
-                <a
-                  href="https://wa.me/971553250775"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center space-x-4 p-4 bg-white/10 rounded-lg hover:bg-white/20 transition-colors"
-                >
-                  <div className="w-12 h-12 bg-green-500 rounded-lg flex items-center justify-center">
-                    <MessageCircle className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-white/70">WhatsApp</p>
-                    <p className="text-lg font-bold">+971553250775</p>
-                  </div>
-                </a>
-
-                <div className="flex items-start space-x-4 p-4 bg-white/10 rounded-lg">
-                  <div className="w-12 h-12 bg-secondary-emerald rounded-lg flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-white" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-white/70 mb-2">Location</p>
-                    <div className="flex flex-wrap gap-2">
-                      <span className="px-3 py-1 bg-white/20 rounded-full text-sm">Ajman, Sharjah, UAE</span>
-                      {locations.map((location, index) => (
-                        <span
-                          key={index}
-                          className="px-3 py-1 bg-white/20 rounded-full text-sm"
-                        >
-                          {location}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+            <div className="rounded-2xl bg-primary-navy text-white p-5 flex gap-4 items-start">
+              <Clock4 className="w-5 h-5 text-secondary-cyan mt-0.5 flex-shrink-0" />
+              <div>
+                <p className="font-semibold">Working Hours</p>
+                <p className="text-sm text-white/80">
+                  Mon – Sun · 8:00 AM – 8:00 PM<br />
+                  Emergency support 24/7
+                </p>
               </div>
             </div>
-
-            <motion.a
-              href="https://wa.me/971553250775"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full px-8 py-4 bg-green-500 hover:bg-green-600 text-white rounded-xl font-bold text-lg flex items-center justify-center space-x-2 transition-colors"
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-            >
-              <MessageCircle className="w-5 h-5" />
-              <span>Chat on WhatsApp</span>
-            </motion.a>
+            <div className="flex items-center gap-2 text-sm text-gray-600 px-2">
+              <ShieldCheck className="w-4 h-4 text-secondary-emerald" />
+              UAE licensed technical trading company
+            </div>
           </motion.div>
         </div>
       </div>
@@ -253,4 +209,48 @@ Message: ${formData.message}`;
   );
 }
 
+function Field({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <label className="block">
+      <span className="block text-sm font-semibold text-primary-navy mb-1.5">{label}</span>
+      {children}
+    </label>
+  );
+}
 
+function ContactCard({
+  href,
+  external,
+  icon: Icon,
+  label,
+  value,
+  accent,
+}: {
+  href?: string;
+  external?: boolean;
+  icon: any;
+  label: string;
+  value: string;
+  accent: string;
+}) {
+  const inner = (
+    <div className="group flex items-center gap-4 p-4 rounded-2xl bg-white border border-gray-100 hover:border-secondary-cyan/40 hover:shadow-lg transition-all">
+      <div
+        className={`w-12 h-12 rounded-xl bg-gradient-to-br ${accent} flex items-center justify-center text-white shadow-md group-hover:scale-110 transition-transform`}
+      >
+        <Icon className="w-5 h-5" />
+      </div>
+      <div>
+        <p className="text-xs uppercase tracking-widest text-gray-500 font-semibold">{label}</p>
+        <p className="text-base font-bold text-primary-navy">{value}</p>
+      </div>
+    </div>
+  );
+
+  if (!href) return inner;
+  return external ? (
+    <a href={href} target="_blank" rel="noopener noreferrer">{inner}</a>
+  ) : (
+    <a href={href}>{inner}</a>
+  );
+}

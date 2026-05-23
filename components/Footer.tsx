@@ -1,14 +1,13 @@
-"use client";
-
-import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, MessageCircle, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const quickLinks = [
   { label: "Home", href: "/" },
   { label: "Services", href: "/services" },
+  { label: "Products", href: "/products" },
   { label: "Service Areas", href: "/areas" },
-  { label: "Why Us", href: "/why-us" },
+  { label: "About", href: "/why-us" },
   { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/contact" },
 ];
@@ -25,128 +24,170 @@ const services = [
 const socialLinks = [
   { icon: Facebook, href: "#", label: "Facebook" },
   { icon: Instagram, href: "#", label: "Instagram" },
-  { icon: Twitter, href: "#", label: "Twitter" },
   { icon: Linkedin, href: "#", label: "LinkedIn" },
 ];
 
 export default function Footer() {
   return (
-    <footer className="bg-primary-navy text-white">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
-          {/* Company Info */}
-          <div>
-            <div className="mb-4">
-              <h3 className="text-xl font-extrabold">AL AROOJ TECHNICAL TRADING F.Z.E</h3>
-            </div>
-            <p className="text-gray-400 mb-4">
-              Professional auto garage equipment installation, maintenance, and repair services in UAE.
+    <footer className="relative bg-primary-dark text-white overflow-hidden">
+      <div className="absolute inset-0 grid-bg opacity-30 pointer-events-none" />
+      <div className="absolute -top-40 -left-40 h-96 w-96 rounded-full bg-secondary-cyan/10 blur-3xl" />
+      <div className="absolute -top-20 -right-20 h-80 w-80 rounded-full bg-accent-orange/10 blur-3xl" />
+
+      {/* CTA strip */}
+      <div className="relative container-tight pt-16 pb-10">
+        <div className="rounded-3xl bg-gradient-to-br from-primary-navy to-primary-slate p-8 md:p-12 border border-white/10 flex flex-col md:flex-row gap-8 items-center justify-between">
+          <div className="text-center md:text-left max-w-2xl">
+            <h3 className="text-2xl md:text-3xl font-extrabold">
+              Need workshop equipment service?
+            </h3>
+            <p className="mt-2 text-white/75">
+              We respond fast across Sharjah & Ajman. Call or WhatsApp now.
             </p>
-            <div className="flex space-x-4">
-              {socialLinks.map((social, index) => (
+          </div>
+          <div className="flex flex-wrap gap-3">
+            <a href="tel:+971564861236" className="btn-primary">
+              <Phone className="w-5 h-5" />
+              Call Now
+            </a>
+            <a
+              href="https://wa.me/971553250775"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-whatsapp"
+            >
+              <MessageCircle className="w-5 h-5" />
+              WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div className="relative container-tight pb-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div>
+            <Link href="/" className="flex items-center gap-3 mb-5">
+              <Image
+                src="/images/arooj_logo.jpeg"
+                alt="AL AROOJ logo"
+                width={44}
+                height={44}
+                className="w-11 h-11 rounded-xl object-cover ring-1 ring-white/10"
+              />
+              <div>
+                <p className="text-base font-extrabold tracking-wide">AL AROOJ TECHNICAL</p>
+                <p className="text-[10px] font-semibold text-secondary-cyan/90 tracking-[0.18em] uppercase">
+                  Trading F.Z.E
+                </p>
+              </div>
+            </Link>
+            <p className="text-white/65 leading-relaxed text-sm">
+              Professional auto garage equipment installation, maintenance and emergency repair
+              services across the UAE.
+            </p>
+            <div className="flex gap-2 mt-5">
+              {socialLinks.map((s, i) => (
                 <a
-                  key={index}
-                  href={social.href}
-                  className="w-10 h-10 bg-white/10 hover:bg-secondary-emerald rounded-lg flex items-center justify-center transition-colors"
-                  aria-label={social.label}
+                  key={i}
+                  href={s.href}
+                  aria-label={s.label}
+                  className="h-10 w-10 rounded-xl bg-white/5 hover:bg-secondary-cyan/20 border border-white/10 hover:border-secondary-cyan/40 flex items-center justify-center transition"
                 >
-                  <social.icon className="w-5 h-5" />
+                  <s.icon className="w-4 h-4" />
                 </a>
               ))}
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              {quickLinks.map((link, index) => (
-                <li key={index}>
-                  {link.href.startsWith('/') ? (
-                    <Link
-                      href={link.href}
-                      className="text-gray-400 hover:text-secondary-emerald transition-colors"
-                    >
-                      {link.label}
-                    </Link>
-                  ) : (
-                    <a
-                      href={link.href}
-                      className="text-gray-400 hover:text-secondary-emerald transition-colors"
-                    >
-                      {link.label}
-                    </a>
-                  )}
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Services */}
-          <div>
-            <h3 className="text-lg font-bold mb-4">Our Services</h3>
-            <ul className="space-y-2">
-              {services.map((service, index) => (
-                <li key={index}>
+            <h4 className="text-sm font-bold uppercase tracking-widest text-secondary-cyan mb-4">
+              Quick Links
+            </h4>
+            <ul className="space-y-2.5">
+              {quickLinks.map((link) => (
+                <li key={link.label}>
                   <Link
-                    href="/services"
-                    className="text-gray-400 hover:text-secondary-emerald transition-colors"
+                    href={link.href}
+                    className="group flex items-center gap-1.5 text-white/70 hover:text-white text-sm transition"
                   >
-                    {service}
+                    <span>{link.label}</span>
+                    <ArrowUpRight className="w-3.5 h-3.5 opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition" />
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
-            <h3 className="text-lg font-bold mb-4">Contact Us</h3>
-            <ul className="space-y-3">
-              <li className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-secondary-emerald" />
+            <h4 className="text-sm font-bold uppercase tracking-widest text-secondary-cyan mb-4">
+              Services
+            </h4>
+            <ul className="space-y-2.5">
+              {services.map((s) => (
+                <li key={s}>
+                  <Link
+                    href="/services"
+                    className="text-white/70 hover:text-white text-sm transition"
+                  >
+                    {s}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-sm font-bold uppercase tracking-widest text-secondary-cyan mb-4">
+              Contact
+            </h4>
+            <ul className="space-y-3.5 text-sm">
+              <li>
                 <a
                   href="tel:+971564861236"
-                  className="text-gray-400 hover:text-secondary-emerald transition-colors"
+                  className="flex items-start gap-3 text-white/80 hover:text-white"
                 >
-                  +971564861236
+                  <Phone className="w-4 h-4 mt-0.5 text-secondary-cyan flex-shrink-0" />
+                  <span>+971 56 486 1236</span>
                 </a>
               </li>
-              <li className="flex items-center space-x-3">
-                <Mail className="w-5 h-5 text-secondary-emerald" />
+              <li>
+                <a
+                  href="https://wa.me/971553250775"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-3 text-white/80 hover:text-white"
+                >
+                  <MessageCircle className="w-4 h-4 mt-0.5 text-secondary-cyan flex-shrink-0" />
+                  <span>+971 55 325 0775 (WhatsApp)</span>
+                </a>
+              </li>
+              <li>
                 <a
                   href="mailto:Alaroojtradings@gmail.com"
-                  className="text-gray-400 hover:text-secondary-emerald transition-colors"
+                  className="flex items-start gap-3 text-white/80 hover:text-white break-all"
                 >
-                  Alaroojtradings@gmail.com
+                  <Mail className="w-4 h-4 mt-0.5 text-secondary-cyan flex-shrink-0" />
+                  <span>Alaroojtradings@gmail.com</span>
                 </a>
               </li>
-              <li className="flex items-start space-x-3">
-                <MapPin className="w-5 h-5 text-secondary-emerald mt-1" />
-                <span className="text-gray-400">
-                  Ajman, Sharjah
-                  <br />
-                  United Arab Emirates
-                </span>
+              <li className="flex items-start gap-3 text-white/80">
+                <MapPin className="w-4 h-4 mt-0.5 text-secondary-cyan flex-shrink-0" />
+                <span>Ajman, Sharjah<br />United Arab Emirates</span>
               </li>
             </ul>
           </div>
         </div>
+      </div>
 
-        <div className="border-t border-white/10 pt-8 mt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <p className="text-gray-400 text-sm">
-              © {new Date().getFullYear()} AL AROOJ TECHNICAL TRADING F.Z.E. All rights reserved.
-            </p>
-            <div className="flex items-center space-x-2">
-              <span className="text-2xl">🇦🇪</span>
-              <span className="text-gray-400 text-sm">Proudly serving UAE auto workshops</span>
-            </div>
-          </div>
+      <div className="relative border-t border-white/10">
+        <div className="container-tight py-6 flex flex-col md:flex-row justify-between items-center gap-3 text-sm text-white/55">
+          <p>© {new Date().getFullYear()} AL AROOJ TECHNICAL TRADING F.Z.E · All rights reserved.</p>
+          <p className="flex items-center gap-2">
+            <span aria-hidden>🇦🇪</span>
+            <span>Proudly serving UAE auto workshops</span>
+          </p>
         </div>
       </div>
     </footer>
   );
 }
-
-
