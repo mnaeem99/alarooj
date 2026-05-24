@@ -9,6 +9,7 @@ import {
   DEFAULT_OG_IMAGE,
   DEFAULT_DESCRIPTION,
 } from "@/lib/seo";
+import { getSameAsUrls } from "@/lib/business-profile";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -38,11 +39,6 @@ export const metadata: Metadata = {
   classification: "Business",
   applicationName: SITE_NAME,
   referrer: "origin-when-cross-origin",
-  icons: {
-    icon: [{ url: "/images/arooj_logo.jpeg", type: "image/jpeg" }],
-    apple: [{ url: "/images/arooj_logo.jpeg", type: "image/jpeg" }],
-    shortcut: "/images/arooj_logo.jpeg",
-  },
   manifest: "/manifest.json",
   formatDetection: {
     email: true,
@@ -212,7 +208,7 @@ export default function RootLayout({
       areaServed: "AE",
       availableLanguage: ["English", "Arabic"],
     },
-    sameAs: ["https://wa.me/971553250775"],
+    sameAs: getSameAsUrls(),
   };
 
   const website = {

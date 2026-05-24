@@ -127,13 +127,13 @@ export default function ProductDetailsPage({ params }: ProductPageProps) {
             Back to Catalog
           </Link>
 
-          <div className="grid lg:grid-cols-2 gap-10 items-center">
-            <div>
+          <div className="grid lg:grid-cols-5 gap-10 items-center">
+            <div className="lg:col-span-3">
               <span className="section-eyebrow">Workshop Equipment</span>
               <h1 className="mt-5 text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight text-balance">
                 {product.name}
               </h1>
-              <p className="mt-5 text-lg text-white/80 leading-relaxed">
+              <p className="mt-5 text-lg text-white/80 leading-relaxed max-w-xl">
                 {product.shortDescription}
               </p>
               <div className="mt-7 flex flex-wrap gap-3">
@@ -152,21 +152,25 @@ export default function ProductDetailsPage({ params }: ProductPageProps) {
             </div>
 
             {productImages.length > 0 && (
-              <div className="relative">
-                <div className="relative aspect-[4/3] rounded-3xl overflow-hidden glass-dark p-4">
-                  <div className="relative w-full h-full rounded-2xl overflow-hidden bg-white/95">
+              <div className="lg:col-span-2 relative flex justify-center lg:justify-end">
+                <div className="relative w-full max-w-[320px]">
+                  {/* Decorative frame */}
+                  <div className="absolute -inset-3 rounded-3xl bg-gradient-to-br from-secondary-cyan/30 to-accent-orange/20 blur-2xl" />
+                  <div className="relative aspect-square rounded-3xl overflow-hidden bg-white border border-white/20 shadow-2xl">
+                    <div className="absolute inset-0 grid-bg opacity-60" />
                     <Image
                       src={productImages[0]}
                       alt={`${product.name} hero`}
                       fill
-                      sizes="(max-width: 1024px) 100vw, 50vw"
-                      className="object-contain p-4"
+                      sizes="320px"
+                      className="object-contain p-8 relative"
                       priority
                     />
                   </div>
-                </div>
-                <div className="absolute -bottom-4 -right-4 w-24 h-24 rounded-2xl bg-accent-orange flex items-center justify-center text-white shadow-2xl">
-                  <Wrench className="w-10 h-10" />
+                  {/* Wrench badge */}
+                  <div className="absolute -bottom-4 -right-4 w-20 h-20 rounded-2xl bg-accent-orange flex items-center justify-center text-white shadow-2xl rotate-6">
+                    <Wrench className="w-9 h-9" />
+                  </div>
                 </div>
               </div>
             )}
@@ -185,23 +189,23 @@ export default function ProductDetailsPage({ params }: ProductPageProps) {
                 Models &amp; configurations available
               </h2>
             </div>
-            <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-5">
+            <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
               {productImages.map((imageSrc, index) => (
                 <div
                   key={`${imageSrc}-${index}`}
                   className="group relative rounded-2xl overflow-hidden border border-gray-100 bg-white hover:border-secondary-cyan/40 hover:shadow-card-hover hover:-translate-y-1 transition-all duration-500"
                 >
-                  <div className="relative aspect-[4/3] bg-gradient-to-br from-slate-50 to-slate-100">
+                  <div className="relative aspect-square bg-gradient-to-br from-slate-50 via-white to-secondary-cyan/10 grid-bg">
                     <Image
                       src={imageSrc}
                       alt={`${product.name} variant ${index + 1}`}
                       fill
-                      sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, (max-width: 1536px) 18vw, 200px"
-                      className="object-contain p-4 group-hover:scale-105 transition-transform duration-500"
+                      sizes="(max-width: 640px) 30vw, (max-width: 1024px) 20vw, 150px"
+                      className="object-contain p-3 group-hover:scale-110 transition-transform duration-500"
                     />
                   </div>
-                  <div className="bg-primary-navy text-white px-3 py-2.5 text-center">
-                    <p className="text-xs font-semibold uppercase tracking-wider truncate">
+                  <div className="bg-primary-navy text-white px-2.5 py-2 text-center">
+                    <p className="text-[10px] font-semibold uppercase tracking-wider truncate">
                       {product.name}
                     </p>
                   </div>
@@ -278,37 +282,42 @@ export default function ProductDetailsPage({ params }: ProductPageProps) {
               </Link>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {related.map((rp) => {
                 const cover = getProductImages(rp.slug)[0];
                 return (
                   <Link
                     key={rp.id}
                     href={`/products/${rp.slug}`}
-                    className="group relative bg-white rounded-3xl overflow-hidden border border-gray-100 hover:border-secondary-cyan/40 hover:shadow-card-hover transition-all duration-500"
+                    className="group relative bg-white rounded-3xl p-5 border border-gray-100 hover:border-secondary-cyan/40 hover:shadow-card-hover transition-all duration-500 flex flex-col"
                   >
-                    <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-secondary-cyan/10 text-secondary-cyan border border-secondary-cyan/20">
+                        Equipment
+                      </span>
+                      <ArrowUpRight className="w-4 h-4 text-gray-300 group-hover:text-secondary-cyan group-hover:rotate-12 transition-all" />
+                    </div>
+
+                    <div className="relative mx-auto w-full max-w-[180px] aspect-square rounded-2xl bg-gradient-to-br from-slate-50 via-white to-secondary-cyan/10 border border-gray-100 overflow-hidden mb-5 grid-bg">
                       {cover ? (
                         <Image
                           src={cover}
                           alt={rp.name}
                           fill
-                          sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, 33vw"
-                          className="object-cover group-hover:scale-110 transition-transform duration-700"
+                          sizes="180px"
+                          className="object-contain p-5 group-hover:scale-110 transition-transform duration-500"
                         />
                       ) : (
                         <div className="absolute inset-0 bg-gradient-to-br from-secondary-cyan/15 to-secondary-emerald/15" />
                       )}
-                      <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/65 via-primary-dark/0 to-transparent" />
                     </div>
-                    <div className="p-5">
-                      <h3 className="text-lg font-bold text-primary-navy group-hover:text-secondary-cyan transition-colors line-clamp-1">
-                        {rp.name}
-                      </h3>
-                      <p className="mt-1.5 text-sm text-gray-600 line-clamp-2">
-                        {rp.shortDescription}
-                      </p>
-                    </div>
+
+                    <h3 className="text-base font-bold text-primary-navy group-hover:text-secondary-cyan transition-colors line-clamp-1 mb-1.5">
+                      {rp.name}
+                    </h3>
+                    <p className="text-sm text-gray-600 line-clamp-2 flex-1">
+                      {rp.shortDescription}
+                    </p>
                   </Link>
                 );
               })}

@@ -1,6 +1,7 @@
 import { Phone, Mail, MapPin, Facebook, Instagram, Linkedin, MessageCircle, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
+import ListedOnline from "@/components/ListedOnline";
 
 const quickLinks = [
   { label: "Home", href: "/" },
@@ -177,6 +178,8 @@ export default function Footer() {
             </ul>
           </div>
         </div>
+
+        <ListedOnline />
       </div>
 
       <div className="relative border-t border-white/10">

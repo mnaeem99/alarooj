@@ -63,44 +63,46 @@ export default function ProductsPage() {
       <section className="relative py-20 bg-neutral-light overflow-hidden">
         <div className="absolute inset-0 dot-bg opacity-50 pointer-events-none" />
         <div className="container-tight relative">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5">
             {products.map((product) => {
               const cover = getProductImages(product.slug)[0];
               return (
                 <Link
                   key={product.id}
                   href={`/products/${product.slug}`}
-                  className="group relative bg-white rounded-3xl overflow-hidden border border-gray-100 hover:border-secondary-cyan/40 hover:shadow-card-hover transition-all duration-500"
+                  className="group relative bg-white rounded-3xl p-5 border border-gray-100 hover:border-secondary-cyan/40 hover:shadow-card-hover transition-all duration-500 flex flex-col"
                 >
-                  <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-secondary-cyan/10 text-secondary-cyan border border-secondary-cyan/20">
+                      Equipment
+                    </span>
+                    <ArrowUpRight className="w-4 h-4 text-gray-300 group-hover:text-secondary-cyan group-hover:rotate-12 transition-all" />
+                  </div>
+
+                  <div className="relative mx-auto w-full max-w-[180px] aspect-square rounded-2xl bg-gradient-to-br from-slate-50 via-white to-secondary-cyan/10 border border-gray-100 overflow-hidden mb-5 grid-bg">
                     {cover ? (
                       <Image
                         src={cover}
                         alt={product.name}
                         fill
-                        sizes="(max-width: 640px) 90vw, (max-width: 1024px) 45vw, (max-width: 1280px) 33vw, 25vw"
-                        className="object-cover transition-transform duration-700 group-hover:scale-110"
+                        sizes="180px"
+                        className="object-contain p-5 group-hover:scale-110 transition-transform duration-500"
                       />
                     ) : (
                       <div className="absolute inset-0 bg-gradient-to-br from-secondary-cyan/15 to-secondary-emerald/15" />
                     )}
-                    <div className="absolute inset-0 bg-gradient-to-t from-primary-dark/65 via-primary-dark/0 to-transparent" />
-                    <span className="absolute top-3 left-3 px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-white/90 text-primary-navy">
-                      Equipment
-                    </span>
                   </div>
-                  <div className="p-5">
-                    <h2 className="text-lg font-bold text-primary-navy group-hover:text-secondary-cyan transition-colors line-clamp-2">
-                      {product.name}
-                    </h2>
-                    <p className="mt-2 text-sm text-gray-600 line-clamp-3">
-                      {product.shortDescription}
-                    </p>
-                    <span className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-secondary-cyan group-hover:gap-2.5 transition-all">
-                      Explore product
-                      <ArrowUpRight className="w-4 h-4" />
-                    </span>
-                  </div>
+
+                  <h2 className="text-base font-bold text-primary-navy group-hover:text-secondary-cyan transition-colors line-clamp-2 mb-1.5">
+                    {product.name}
+                  </h2>
+                  <p className="text-sm text-gray-600 line-clamp-2 mb-4 flex-1">
+                    {product.shortDescription}
+                  </p>
+                  <span className="inline-flex items-center gap-1.5 text-sm font-semibold text-secondary-cyan group-hover:gap-2.5 transition-all">
+                    Explore product
+                    <ArrowUpRight className="w-3.5 h-3.5" />
+                  </span>
                 </Link>
               );
             })}

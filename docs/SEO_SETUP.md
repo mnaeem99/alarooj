@@ -102,7 +102,7 @@ In **Bing Webmaster Tools** → **IndexNow** → confirm the key is detected.
 |--------|-----|
 | **Google Business Profile** + reviews | Drives “near me” and map traffic |
 | **WhatsApp / phone on every page** | Already on site — track calls in GBP |
-| **List on UAE directories** | Yellow Pages UAE, Dubizzle business, local chamber |
+| **List on UAE directories** | See **[UAE_DIRECTORIES.md](./UAE_DIRECTORIES.md)** — copy from `public/business-nap.txt` |
 | **Instagram / Facebook** with website link | Social signals + direct leads |
 | **Before/after project posts** | Content Google can rank |
 | **Target long-tail keywords** | e.g. “car lift repair Ajman” not just “garage equipment” |

@@ -1,0 +1,152 @@
+[
+  {
+    "id": "google-business",
+    "name": "Google Business Profile",
+    "priority": "high",
+    "cost": "free",
+    "signupUrl": "https://business.google.com/",
+    "profileUrl": "",
+    "categories": ["Auto repair shop", "Equipment supplier"],
+    "notes": "Highest impact for local map searches. Verify address, add 10+ photos, collect reviews weekly."
+  },
+  {
+    "id": "bing-places",
+    "name": "Bing Places for Business",
+    "priority": "high",
+    "cost": "free",
+    "signupUrl": "https://www.bingplaces.com/",
+    "profileUrl": "",
+    "categories": ["Automotive repair", "Industrial services"],
+    "notes": "Import from Google Business Profile after GBP is live to save time."
+  },
+  {
+    "id": "apple-business",
+    "name": "Apple Business Connect",
+    "priority": "high",
+    "cost": "free",
+    "signupUrl": "https://businessconnect.apple.com/",
+    "profileUrl": "",
+    "categories": ["Automotive services"],
+    "notes": "Shows your business on Apple Maps and Siri on iPhones."
+  },
+  {
+    "id": "facebook-page",
+    "name": "Facebook Business Page",
+    "priority": "high",
+    "cost": "free",
+    "signupUrl": "https://www.facebook.com/pages/create",
+    "profileUrl": "",
+    "categories": ["Automotive repair", "Commercial & industrial"],
+    "notes": "Add website, WhatsApp button, service areas, and weekly project photos."
+  },
+  {
+    "id": "instagram",
+    "name": "Instagram Business",
+    "priority": "medium",
+    "cost": "free",
+    "signupUrl": "https://www.instagram.com/accounts/emailsignup/",
+    "profileUrl": "",
+    "categories": ["Local business"],
+    "notes": "Link to website in bio. Post before/after workshop jobs with location tags (Sharjah, Ajman)."
+  },
+  {
+    "id": "linkedin",
+    "name": "LinkedIn Company Page",
+    "priority": "medium",
+    "cost": "free",
+    "signupUrl": "https://www.linkedin.com/company/setup/new/",
+    "profileUrl": "",
+    "categories": ["Industrial equipment", "Automotive"],
+    "notes": "Good for B2B garage owners and fleet workshops."
+  },
+  {
+    "id": "yellowpages-uae",
+    "name": "Yellow Pages UAE",
+    "priority": "high",
+    "cost": "freemium",
+    "signupUrl": "https://www.yellowpages.ae/",
+    "profileUrl": "",
+    "categories": ["Garage equipment", "Industrial maintenance"],
+    "notes": "Search the site first; if not listed, use Contact / Add business options on their site."
+  },
+  {
+    "id": "dubizzle",
+    "name": "Dubizzle (Business / Services)",
+    "priority": "medium",
+    "cost": "freemium",
+    "signupUrl": "https://www.dubizzle.com/",
+    "profileUrl": "",
+    "categories": ["Services", "Industrial equipment"],
+    "notes": "Post service ads in Motors / Services with link to your website and WhatsApp."
+  },
+  {
+    "id": "atninfo",
+    "name": "ATN Info (UAE B2B directory)",
+    "priority": "medium",
+    "cost": "freemium",
+    "signupUrl": "https://www.atninfo.com/",
+    "profileUrl": "",
+    "categories": ["Industrial equipment", "Automotive workshop"],
+    "notes": "Strong for industrial and garage equipment visibility in UAE."
+  },
+  {
+    "id": "kompass",
+    "name": "Kompass UAE",
+    "priority": "low",
+    "cost": "freemium",
+    "signupUrl": "https://ae.kompass.com/",
+    "profileUrl": "",
+    "categories": ["Industrial machinery", "Automotive services"],
+    "notes": "B2B directory; useful if you supply or service workshops at scale."
+  },
+  {
+    "id": "uae-business-directory",
+    "name": "UAE Business Directory",
+    "priority": "medium",
+    "cost": "free",
+    "signupUrl": "https://www.uaebusinessdirectory.com/",
+    "profileUrl": "",
+    "categories": ["Technical services", "Trading"],
+    "notes": "Free basic listing; keep NAP identical to your website."
+  },
+  {
+    "id": "gulf-business",
+    "name": "Gulf Business Directory",
+    "priority": "low",
+    "cost": "free",
+    "signupUrl": "https://www.gulfbusinessdirectory.com/",
+    "profileUrl": "",
+    "categories": ["Industrial", "Automotive"],
+    "notes": "Submit company profile with Sharjah/Ajman service areas."
+  },
+  {
+    "id": "ajman-chamber",
+    "name": "Ajman Chamber of Commerce",
+    "priority": "medium",
+    "cost": "freemium",
+    "signupUrl": "https://www.ajmanchamber.ae/",
+    "profileUrl": "",
+    "categories": ["Member directory"],
+    "notes": "If you are a chamber member, ensure your listing includes website and phone."
+  },
+  {
+    "id": "sharjah-chamber",
+    "name": "Sharjah Chamber of Commerce",
+    "priority": "medium",
+    "cost": "freemium",
+    "signupUrl": "https://www.sharjah.ae/",
+    "profileUrl": "",
+    "categories": ["Member directory"],
+    "notes": "Check member services portal for business directory visibility."
+  },
+  {
+    "id": "yelp-uae",
+    "name": "Yelp (UAE)",
+    "priority": "low",
+    "cost": "free",
+    "signupUrl": "https://biz.yelp.com/signup",
+    "profileUrl": "",
+    "categories": ["Auto repair", "Industrial"],
+    "notes": "Claim or add your business; fewer users than Google in UAE but still a citation."
+  }
+]
